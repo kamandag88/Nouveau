@@ -17,18 +17,17 @@
 
     var json = [];
 
-    function upload() {
-        var str = JSON.stringify(json);
-        aop.setStore("store1", test2);
-        alert("Uploaded Success!");
-    }
+	function upload() {
+		var str = JSON.stringify(json);
+		aop.setStore("store1", str);
+		alert("Uploaded Success!");
+	}
 
     function download(){
         var store = aop.getStore("store1");
         var obj = JSON.parse(store);
     }
 
-//<button onclick="download()">Download</button> 
 </script>
     First name: <input name="myInput" type="text"> <br>
     <button onclick="upload()">Upload</button>
