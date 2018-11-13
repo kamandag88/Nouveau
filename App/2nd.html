@@ -17,7 +17,7 @@
 
     //var json = [];
     var test2 ="test";
-    document.getElementById("test").value = test2;
+
 
     function upload() {
         //var str = JSON.stringify(json);
@@ -28,6 +28,7 @@
     function download(){
         var store = aop.getStore("store1");
         var obj = JSON.parse(store);
+        document.getElementById("test").value = test2;
     }
 
 </script>
