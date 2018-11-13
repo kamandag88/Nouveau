@@ -17,21 +17,22 @@
 
     var json = [];
 
-	function upload() {
-		var str = JSON.stringify(json);
-		aop.setStore("store1", str);
-		alert("Uploaded Success!");
-	}
+    function upload() {
+        var str = JSON.stringify(json);
+        aop.setStore("store1", str);
+        alert("Uploaded Success!");
+    }
 
     function download(){
         var store = aop.getStore("store1");
         var obj = JSON.parse(store);
+        document.getElementbyId("test").innerHTML = obj;
     }
 
 </script>
-    First name: <input name="myInput" type="text"> <br>
+    First name: <input type="text" name="json"> <br>
     <button onclick="upload()">Upload</button>
-    <label id="test">test</label><br>
+    <label id="test">test</label>
    
    	
 </body>			
