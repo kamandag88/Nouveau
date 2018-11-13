@@ -17,11 +17,11 @@
 
     //var json = [];
     var test2 ="test";
-
+    test2 = document.getElementById("myInput").value;
 
     function upload() {
         //var str = JSON.stringify(json);
-        aop.setStore("store1", str);
+        aop.setStore("store1", test2);
         alert("Uploaded Success!");
     }
 
