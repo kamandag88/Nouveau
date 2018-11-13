@@ -26,11 +26,10 @@
     function download(){
         var store = aop.getStore("store1");
         var obj = JSON.parse(store);
-        document.getElementById("test").value = test2;
     }
 
 </script>
-    First name: <input id="myInput" type="text"> <br>
+    First name: <input name="myInput" type="text"> <br>
     <button onclick="upload()">Upload</button>
     <label id="test">test</label><br>
     <button onclick="download()">Download</button>
