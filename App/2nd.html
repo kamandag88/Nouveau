@@ -15,10 +15,12 @@
 <body>
 <script>
 
-    var json = [];
+    //var json = [];
+    var test2 ="test";
+    document.getElementById("test").value = test2;
 
     function upload() {
-        var str = JSON.stringify(json);
+        //var str = JSON.stringify(json);
         aop.setStore("store1", str);
         alert("Uploaded Success!");
     }
@@ -26,11 +28,10 @@
     function download(){
         var store = aop.getStore("store1");
         var obj = JSON.parse(store);
-        document.getElementbyId("test").innerHTML = obj;
     }
 
 </script>
-    First name: <input type="text" name="json"> <br>
+    First name: <input id="myInput" type="text"> <br>
     <button onclick="upload()">Upload</button>
     <label id="test">test</label><br>
     <button onclick="download()">Download</button>
