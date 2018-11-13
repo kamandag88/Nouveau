@@ -15,12 +15,10 @@
 <body>
 <script>
 
-    //var json = [];
-    var test2 ="test";
-    test2 = document.getElementById("myInput").value;
+    var json = [];
 
     function upload() {
-        //var str = JSON.stringify(json);
+        var str = JSON.stringify(json);
         aop.setStore("store1", test2);
         alert("Uploaded Success!");
     }
