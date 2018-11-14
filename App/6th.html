@@ -97,18 +97,32 @@
 		function setup(){
 		if(cpf)
 			cpf.setPinMode('["resetPin"],["setPinMode", "digital", 2, "INPUT"],["setPinMode", "digital", 3, "INPUT"],["setPinMode", "digital", 4, "INPUT"],["setPinMode", "digital", 5, "INPUT"],["setPinMode", "digital", 6,"INPUT"],["setPinMode", "digital", 7,"INPUT"],["setPinMode", "analog", 1,"INPUT"],["setPinMode", "analog", 2,"INPUT"]');
-		
+
+		setup();
+
+		var d2value;
+		var d3value;
+
+		function loop(){
+			d2value = cpf.get("d2");
+			document.getElementById("d2value").innerHTML = d2value;
+
+			d3value = cpf.get("d3");
+			document.getElementById("d3value").innerHTML = d3value;
+		}
 		}
 
 	</script>
 
 <body onload="show();">
+
+
 	<div>Time: <span id="time"></span></div>
 	<input type="button" value="start" onclick="start();">
 	<input type="button" value="stop" onclick="stop();">
 	<input type="button" value="reset" onclick="reset()"> 
-
-
+	<div>D2: <span id="d2value"></span></div>
+	<div>D3: <span id="d3value"></span></div>
 </body>		
 
 </html>
