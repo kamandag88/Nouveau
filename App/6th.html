@@ -12,6 +12,16 @@
 		<script type="text/javascript" src="js/timer.js"></script>
 	</head>
 
+<body>
+
+
+	<div>Time: <span id="time"></span></div>
+	<input type="button" value="start" onclick="start();">
+	<input type="button" value="stop" onclick="stop();">
+	<input type="button" value="reset" onclick="reset()">
+	<div>D2: <span id="d2value" value="0"></span></div>
+	<div>D3: <span id="d3value" value="0"></span></div>
+
 	<script>
 		function setup(){
 		if(cpf)
@@ -34,16 +44,6 @@
 		loop();
 
 	</script>
-
-<body>
-
-
-	<!--<div>Time: <span id="time"></span></div>
-	<input type="button" value="start" onclick="start();">
-	<input type="button" value="stop" onclick="stop();">
-	<input type="button" value="reset" onclick="reset()"> -->
-	<div>D2: <span id="d2value" value="0"></span></div>
-	<div>D3: <span id="d3value" value="0"></span></div>
 </body>		
 
 </html>
