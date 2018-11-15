@@ -14,7 +14,7 @@
             if(cpf){
 
                 coverhead = cpf.get("d2");
-                document.getElementById("cover").innerHTML = coverhead; 
+                document.getElementById("cover").style.backgroundImage = "url('img/CoverHead.jpg')"; 
             }
 
                 setTimeout("loop()", 1000); 
