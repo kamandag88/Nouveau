@@ -19,31 +19,10 @@
 	<input type="button" value="start" onclick="start();">
 	<input type="button" value="stop" onclick="stop();">
 	<input type="button" value="reset" onclick="reset();">
-	<div>D2: <span id="d2value" value="cpf.get('d2');"></span></div>
-	<div>D3: <span id="d3value" value="0"></span></div>
+	<div>Cover Head: <span id="cover">0</span></div>
 
-	<script>
-		function setup(){
-		if(cpf)
-			cpf.setPinMode('["resetPin"],["setPinMode", "digital", 2, "INPUT"],["setPinMode", "digital", 3, "INPUT"],["setPinMode", "digital", 4, "INPUT"],["setPinMode", "digital", 5, "INPUT"],["setPinMode", "digital", 6,"INPUT"],["setPinMode", "digital", 7,"INPUT"],["setPinMode", "analog", 1,"INPUT"],["setPinMode", "analog", 2,"INPUT"]');
-		}
+	<script src="js/valuee.js"></script>
 
-		setup();
-
-		var d2value;
-		var d3value;
-
-		//function loop(){
-			//d2value = cpf.get("d2");
-			//document.getElementById("d2value").value = d2value;  
-
-			//d3value = cpf.get("d3");
-			//document.getElementById("d3value").value = d3value;
-		//}
-
-		//loop();
-
-	</script>
 </body>		
 
 </html>
