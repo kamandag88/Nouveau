@@ -1,6 +1,7 @@
         setup();
 
         var score;
+        var stringscore;
 
         var coverhead;
         var coverheadcount;
@@ -43,10 +44,10 @@
                 usefireext = cpf.get("d4");
                 document.getElementById("usefire").innerHTML = usefireext;
 
-                firstexit = cpf.get("d5");
+                firstexit = cpf.get("d6");
                 document.getElementById("firstexit").innerHTML = firstexit;
 
-                rescueperson = cpf.get("d6");
+                rescueperson = cpf.get("d5");
                 document.getElementById("rescue").innerHTML = rescueperson;
 
                 exitafrescue = cpf.get("a1");
@@ -108,6 +109,7 @@
                     setbackgexitafrescue();
                     addscore();
                     addcounterexitafrescue();
+                    uploadfinalscore();
                 }
 
                 else{
@@ -118,6 +120,7 @@
                     setbackgexitdidnrescue();
                     addscore();
                     addcounterexitdidnrescue();
+                    uploadfinalscore();
                 }
 
                 else{
@@ -170,35 +173,41 @@
 
         function addcountercover(){
             coverheadcount = coverheadcount + 1;
-            document.getElementById("covercount")
+            document.getElementById("covercount").innerHTML = coverheadcount;
         }
 
         function addcountergetfire(){
             getfireextcount = getfireextcount + 1;
-            document.getElementById("getfirecount")
+            document.getElementById("getfirecount").innerHTML = getfireextcount;
         }
 
         function addcounterusefire(){
             usefireextcount = usefireextcount + 1;
-            document.getElementById("usefirecount")
+            document.getElementById("usefirecount").innerHTML = usefireextcount;
         }
 
         function addcounterfirstexit(){
             firstexitcount = firstexitcount + 1;
-            document.getElementById("firstexitcount")
+            document.getElementById("firstexitcount").innerHTML = firstexitcount;
         }
 
         function addcounterrescueperson(){
             rescuepersoncount = rescuepersoncount + 1;
-            document.getElementById("rescuecount")
+            document.getElementById("rescuecount").innerHTML = rescuepersoncount;
         }
 
         function addcounterexitafrescue(){
             exitafrescuecount = exitafrescuecount + 1;
-            document.getElementById("exitafterrescuecount")
+            document.getElementById("exitafterrescuecount").innerHTML = exitafterrescuecount;
         }
 
         function addcounterexitdidnfrescue(){
             exitdidnrescuecount = exitdidnrescuecount + 1;
-            document.getElementById("exitdidnotrescuecount")
+            document.getElementById("exitdidnotrescuecount").innerHTML = exitdidnrescuecount;
+        }
+
+        function uploadfinalscore(){
+            stringscore = score.toString();
+            aop.setStore("store0", stringscore);
+            document.getElementById("finalscore").innerHTML = stringscore;
         }
