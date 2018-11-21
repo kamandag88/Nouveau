@@ -50,10 +50,10 @@
                 rescueperson = cpf.get("d5");
                 document.getElementById("rescue").innerHTML = rescueperson;
 
-                exitafrescue = cpf.get("a1");
+                exitafrescue = cpf.get("a2");
                 document.getElementById("exitafterrescue").innerHTML = exitafrescue;
 
-                exitdidnrescue = cpf.get("a2");
+                exitdidnrescue = cpf.get("a3");
                 document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;
 
                 if(coverhead == 1 && coverheadcount == 0) {
