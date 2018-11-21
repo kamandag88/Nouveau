@@ -6,6 +6,9 @@
         var coverhead;
         var coverheadcount;
 
+        var door;
+        var doorcount;
+
         var getfireext;
         var getfireextcount;
 
@@ -26,7 +29,7 @@
 
         function setup(){
         if(cpf)
-            cpf.setPinMode('["resetPin"],["setPinMode", "digital", 2,"INPUT"],["setPinMode", "digital", 3,"INPUT"],["setPinMode", "digital", 4,"INPUT"],["setPinMode", "digital", 5,"INPUT"],["setPinMode", "digital", 6,"INPUT"],["setPinMode", "analog", 1,"INPUT"],["setPinMode", "analog", 2,"INPUT"]');
+            cpf.setPinMode('["resetPin"],["setPinMode", "digital", 2,"INPUT"],["setPinMode", "digital", 3,"INPUT"],["setPinMode", "digital", 4,"INPUT"],["setPinMode", "digital", 5,"INPUT"],["setPinMode", "digital", 6,"INPUT"],["setPinMode", "digital", 7,"INPUT"],["setPinMode", "analog", 2,"INPUT"],["setPinMode", "analog", 3,"INPUT"]');
         }
 
 
@@ -38,16 +41,19 @@
                 coverhead = cpf.get("d2");
                 document.getElementById("cover").innerHTML = coverhead; 
 
-                getfireext = cpf.get("d3");
+                door = cpf.get("d3");
+                document.getElementById("door").innerHTML = door;
+
+                getfireext = cpf.get("d4");
                 document.getElementById("getfire").innerHTML = getfireext;
 
-                usefireext = cpf.get("d4");
+                usefireext = cpf.get("d5");
                 document.getElementById("usefire").innerHTML = usefireext;
 
-                firstexit = cpf.get("d6");
+                firstexit = cpf.get("d7");
                 document.getElementById("firstexit").innerHTML = firstexit;
 
-                rescueperson = cpf.get("d5");
+                rescueperson = cpf.get("d6");
                 document.getElementById("rescue").innerHTML = rescueperson;
 
                 exitafrescue = cpf.get("a2");
@@ -63,6 +69,12 @@
                 }
                 else{
                     setbackgback();
+                }
+
+                if(door == 1 && doorcount == 0){
+                    setbackgdoor();
+                    addscore();
+                    addcounterdoor();
                 }
 
                 if(getfireext == 1 && getfireextcount == 0){
@@ -105,7 +117,7 @@
                     setbackgback();
                 }
 
-                if(exitafrescue <= 30 && exitafrescuecount == 0){
+                if(exitafrescue >= 950 && exitafrescuecount == 0){
                     setbackgexitafrescue();
                     addscore();
                     addcounterexitafrescue();
@@ -116,7 +128,7 @@
                     setbackgback();
                 }
 
-                if(exitdidnrescue <= 30 && exitdidnrescuecount == 0){
+                if(exitdidnrescue >= 950 && exitdidnrescuecount == 0){
                     setbackgexitdidnrescue();
                     addscore();
                     addcounterexitdidnrescue();
@@ -138,6 +150,10 @@
             document.body.style.backgroundImage = "url('img/InsertCoverInfo.jpg')";
         }
 
+        function setbackgdoor(){
+            document.body.style.backgroundImage = "url('img/InsertDoorInfo.jpg')";
+        }
+
         function setbackggetfire(){
             document.body.style.backgroundImage = "url('img/InsertGetFireInfo.jpg')";
         }
@@ -155,11 +171,11 @@
         }
 
         function setbackgexitafrescue(){
-            document.body.style.backgroundImage = "url('img/InsertExitAfterRescueInfo.jpg')";
+            document.body.style.backgroundImage = "url('img/InsertFinishInfo.jpg')";
         }
 
         function setbackgexitdidnrescue(){
-            document.body.style.backgroundImage = "url('img/InsertExitDidnRescueInfo.jpg')";
+            document.body.style.backgroundImage = "url('img/InsertFinishInfo.jpg')";
         }
 
         function setbackgback(){
@@ -175,6 +191,12 @@
             coverheadcount = coverheadcount + 1;
             document.getElementById("covercount").innerHTML = coverheadcount;
         }
+
+        function addcounterdoor(){
+            doorcount = doorcount + 1;
+            document.getElementById("doorcount").innerHTML = doorcount;
+        }
+
 
         function addcountergetfire(){
             getfireextcount = getfireextcount + 1;
