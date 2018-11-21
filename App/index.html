@@ -8,16 +8,65 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/timerr.js"></script>
 
 		<body background="img/HomeScreenV2.jpg">
 	</head>
 
 <body>
 
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center;">
-		<a href="2nd.html"><button type="button"
-		style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%">Module 1: Earthquakes</button>
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center;" id="modulediv">
+		<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="module" onclick="showandhide()">Module 1: Earthquakes</button>
 	</div>
+
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="logindiv" class="hidden">
+			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="login" onclick="showandhide2()">Login</button> 
+	</div>
+
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="nextdiv" class="hidden">
+			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="next" onclick="showandhide3()">Next</button> 
+	</div>
+
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="next2div" class="hidden">
+			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="next2" onclick="showandhide4()">Next</button> 
+	</div>
+
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="startdiv" class="hidden">
+			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="start" onclick="showandhide5()">Start</button> 
+	</div>
+
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="timerdiv" class="hidden">
+		<p><span id="seconds">00</span>:<span id="tens">00</span></p>
+		<button id="button-start">Start</button>
+		<button id="button-stop">Stop</button>
+		<button id="button-reset">Reset</button>
+
+	<div class="hidden" id="infodiv">
+		<div>Time: <span id="time"></span></div>
+		<div>Cover Head: <span id="cover">0</span></div>
+		<div>Points: <span id="totalpoint">0</span></div>
+		<div>Cover Head Counter: <span id="covercount">0</span></div>
+		<div>Get Fire Extinguisher: <span id="getfire">0</span></div>
+		<div>Get Fire Extinguisher Counter: <span id="getfirecount">0</span></div>
+		<div>Use Fire Extinguisher: <span id="usefire">0</span></div>
+		<div>Use Fire Extinguisher Count: <span id="usefirecount">0</span></div>
+		<div>First Exit: <span id="firstexit">0</span></div>
+		<div>First Exit Counter: <span id="firstexitcount">0</span></div>
+		<div>Rescue Trigger: <span id="rescue">0</span></div>
+		<div>Rescue Trigger Counter: <span id="rescuecount">0</span></div>
+		<div>Exit after Rescue: <span id="exitafterrescue">0</span></div>
+		<div>Exit after Rescue Counter: <span id="exitafterrescuecount">0</span></div>
+		<div>Exit did not Rescue: <span id="exitdidnotrescue">0</span></div>
+		<div>Exit did not Rescue Counter: <span id="exitdidnotrescuecount">0</span></div>
+		<div>Final Score: <span id="finalscore">0</span></div>
+	</div>
+
+
+	</div>
+
+
+	<script src="js/button.js"></script>
+	<script src="js/valuee.js"></script>
 
 </body>			
 </html>
