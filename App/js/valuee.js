@@ -1,6 +1,6 @@
         setup();
 
-        var score;
+        var score = 0;
         var stringscore;
 
         var coverhead;
