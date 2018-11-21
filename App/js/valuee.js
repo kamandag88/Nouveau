@@ -1,7 +1,8 @@
         setup();
 
-        var coverhead;
         var score;
+
+        var coverhead;
         var coverheadcount;
 
         var getfireext;
@@ -35,6 +36,24 @@
 
                 coverhead = cpf.get("d2");
                 document.getElementById("cover").innerHTML = coverhead; 
+
+                getfireext = cpf.get("d3");
+                document.getElementById("getfire").innerHTML = getfireext;
+
+                usefireext = cpf.get("d4");
+                document.getElementById("usefire").innerHTML = usefireext;
+
+                firstexit = cpf.get("d5");
+                document.getElementById("firstexit").innerHTML = firstexit;
+
+                rescueperson = cpf.get("d6");
+                document.getElementById("rescue").innerHTML = rescueperson;
+
+                exitafrescue = cpf.get("a1");
+                document.getElementById("exitafterrescue").innerHTML = exitafrescue;
+
+                exitdidnrescue = cpf.get("a2");
+                document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;
 
                 if(coverhead == 1 && coverheadcount == 0) {
                     setbackgcover();
