@@ -117,7 +117,7 @@
                     setbackgback();
                 }
 
-                if(exitafrescue >= 950 && exitafrescuecount == 0){
+                if(exitafrescue >= 980 && exitafrescuecount == 0){
                     setbackgexitafrescue();
                     addscore();
                     addcounterexitafrescue();
@@ -128,7 +128,7 @@
                     setbackgback();
                 }
 
-                if(exitdidnrescue >= 950 && exitdidnrescuecount == 0){
+                if(exitdidnrescue >= 980 && exitdidnrescuecount == 0){
                     setbackgexitdidnrescue();
                     addscore();
                     addcounterexitdidnrescue();
