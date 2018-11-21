@@ -185,6 +185,7 @@
         function addscore(){
             score = score + 100;
             document.getElementById("totalpoint").innerHTML = score;
+            console.log(score);
         }
 
         function addcountercover(){
