@@ -4,28 +4,28 @@
         var stringscore;
 
         var coverhead;
-        var coverheadcount;
+        var coverheadcount = 0;
 
         var door;
-        var doorcount;
+        var doorcount = 0;
 
         var getfireext;
-        var getfireextcount;
+        var getfireextcount = 0;
 
         var usefireext;
-        var usefireextcount;
+        var usefireextcount = 0;
 
         var firstexit;
-        var firstexitcount;
+        var firstexitcount = 0;
 
         var rescueperson;
-        var rescuepersoncount;
+        var rescuepersoncount = 0;
 
         var exitafrescue;
-        var exitafrescuecount;
+        var exitafrescuecount = 0;
 
         var exitdidnrescue;
-        var exitdidnrescuecount;
+        var exitdidnrescuecount = 0;
 
         function setup(){
         if(cpf)
