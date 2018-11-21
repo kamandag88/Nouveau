@@ -224,7 +224,7 @@
             document.getElementById("exitafterrescuecount").innerHTML = exitafterrescuecount;
         }
 
-        function addcounterexitdidnfrescue(){
+        function addcounterexitdidnrescue(){
             exitdidnrescuecount = exitdidnrescuecount + 1;
             document.getElementById("exitdidnotrescuecount").innerHTML = exitdidnrescuecount;
         }
