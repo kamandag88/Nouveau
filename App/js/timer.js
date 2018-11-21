@@ -72,10 +72,15 @@
 		function stop() {
 			x.stop();
 			clearInterval(clocktimer);
+			uploadtime();
 		}
 
 		function reset() {
 			stop();
 			x.reset();
 			update();
+		}
+
+		function uploadtime(){
+			aop.setStore("store1", newTime);
 		}
