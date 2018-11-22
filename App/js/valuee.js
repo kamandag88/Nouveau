@@ -27,8 +27,6 @@
         var exitdidnrescue;
         var exitdidnrescuecount = 0;
 
-        var infodiv;
-
         function setup(){
         if(cpf)
             cpf.setPinMode('["resetPin"],["setPinMode", "digital", 2,"INPUT"],["setPinMode", "digital", 3,"INPUT"],["setPinMode", "digital", 4,"INPUT"],["setPinMode", "digital", 5,"INPUT"],["setPinMode", "digital", 6,"INPUT"],["setPinMode", "digital", 7,"INPUT"],["setPinMode", "analog", 2,"INPUT"],["setPinMode", "analog", 3,"INPUT"]');
@@ -64,56 +62,81 @@
                 exitdidnrescue = cpf.get("a3");
                 document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;
 
-                document.getElementById("infodiv").className = infodiv;
-
-                if(coverhead == 1 && coverheadcount == 0 && infodiv == "show") {
+                if(coverhead == 1 && coverheadcount == 0) {
                     setbackgcover();
                     addscore();
                     addcountercover();
                 }
+                else{
+                    setbackgback();
+                }
 
-                if(door == 1 && doorcount == 0 && infodiv == "show"){
+                if(door == 1 && doorcount == 0){
                     setbackgdoor();
                     addscore();
                     addcounterdoor();
                 }
 
-                if(getfireext == 1 && getfireextcount == 0 && infodiv == "show"){
+                if(getfireext == 1 && getfireextcount == 0){
                     setbackggetfire();
                     addscore();
                     addcountergetfire();
                 }
 
-                if(usefireext == 1 && usefireextcount == 0 && infodiv == "show"){
+                else{
+                    setbackgback();
+                }
+
+                if(usefireext == 1 && usefireextcount == 0){
                     setbackgusefire();
                     addscore();
                     addcounterusefire();
                 }
 
-                if(firstexit == 1 && firstexitcount == 0 && infodiv == "show"){
+                else{
+                    setbackgback();
+                }
+
+                if(firstexit == 1 && firstexitcount == 0){
                     setbackgfirstexit();
                     addscore();
                     addcounterfirstexit();
                 }
 
-                if(rescueperson == 1 && rescuepersoncount == 0 && infodiv == "show"){
+                else{
+                    setbackgback();
+                }
+
+                if(rescueperson == 1 && rescuepersoncount == 0){
                     setbackgrescueperson();
                     addscore();
                     addcounterrescueperson();
                 }
 
-                if(exitafrescue >= 1000 && exitafrescuecount == 0 && infodiv == "show"){
+                else{
+                    setbackgback();
+                }
+
+                if(exitafrescue >= 1000 && exitafrescuecount == 0){
                     setbackgexitafrescue();
                     addscore();
                     addcounterexitafrescue();
                     uploadfinalscore();
                 }
 
-                if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0 && infodiv == "show"){
+                else{
+                    setbackgback();
+                }
+
+                if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0){
                     setbackgexitdidnrescue();
                     addscore();
                     addcounterexitdidnrescue();
                     uploadfinalscore();
+                }
+
+                else{
+                    setbackgback();
                 }
 
             }
