@@ -103,6 +103,7 @@
                     addscore();
                     addcounterexitafrescue();
                     uploadfinalscore();
+                    clearInterval(interval);
                 }
 
                 if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0){
@@ -110,6 +111,7 @@
                     addscore();
                     addcounterexitdidnrescue();
                     uploadfinalscore();
+                    clearInterval(interval);
                 }
 
             }
@@ -194,7 +196,7 @@
 
         function addcounterexitafrescue(){
             exitafrescuecount = exitafrescuecount + 1;
-            document.getElementById("exitafterrescuecount").innerHTML = exitafterrescuecount;
+            document.getElementById("exitafterrescuecount").innerHTML = exitafrescuecount;
         }
 
         function addcounterexitdidnrescue(){
