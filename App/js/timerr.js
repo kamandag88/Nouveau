@@ -44,7 +44,6 @@ window.onload = function () {
     } 
     
     if (tens > 99) {
-      console.log("seconds");
       seconds++;
       appendSeconds.innerHTML = "0" + seconds;
       tens = 0;
