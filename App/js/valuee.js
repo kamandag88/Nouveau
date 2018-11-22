@@ -67,9 +67,6 @@
                     addscore();
                     addcountercover();
                 }
-                else{
-                    setbackgback();
-                }
 
                 if(door == 1 && doorcount == 0){
                     setbackgdoor();
@@ -83,18 +80,10 @@
                     addcountergetfire();
                 }
 
-                else{
-                    setbackgback();
-                }
-
                 if(usefireext == 1 && usefireextcount == 0){
                     setbackgusefire();
                     addscore();
                     addcounterusefire();
-                }
-
-                else{
-                    setbackgback();
                 }
 
                 if(firstexit == 1 && firstexitcount == 0){
@@ -103,18 +92,10 @@
                     addcounterfirstexit();
                 }
 
-                else{
-                    setbackgback();
-                }
-
                 if(rescueperson == 1 && rescuepersoncount == 0){
                     setbackgrescueperson();
                     addscore();
                     addcounterrescueperson();
-                }
-
-                else{
-                    setbackgback();
                 }
 
                 if(exitafrescue >= 1000 && exitafrescuecount == 0){
@@ -124,19 +105,11 @@
                     uploadfinalscore();
                 }
 
-                else{
-                    setbackgback();
-                }
-
                 if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0){
                     setbackgexitdidnrescue();
                     addscore();
                     addcounterexitdidnrescue();
                     uploadfinalscore();
-                }
-
-                else{
-                    setbackgback();
                 }
 
             }
