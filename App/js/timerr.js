@@ -13,6 +13,7 @@ window.onload = function () {
     buttonStart.onclick = function(){
      clearInterval(Interval);
      Interval = setInterval(startTimer, 10);
+    document.getElementById("button-start").style.visibility = "hidden";
   }
 
   
