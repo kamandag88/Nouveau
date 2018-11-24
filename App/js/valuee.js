@@ -285,8 +285,6 @@ function showandhide(){
 function showandhide2() {
     var nameinput = document.getElementById("userInput").value;
     var gradeandsection = document.getElementById("userGS").value;
-    alert(nameinput);
-    alert(gradeandsection);
     document.getElementById("logindiv").style.visibility = "hidden";
     document.getElementById("nextdiv").className = "show";
     document.body.style.backgroundImage = "url('img/3rdScreen.jpg')";
