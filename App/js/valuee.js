@@ -165,7 +165,6 @@
                     addscore();
                     addcounterexitafrescue();
                     uploadfinalscore();
-                    clearInterval(interval);
                 }
 
                 if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0 && document.getElementById("infodiv").className == "show"){
@@ -173,7 +172,6 @@
                     addscore();
                     addcounterexitdidnrescue();
                     uploadfinalscore();
-                    clearInterval(interval);
                 }
 
             }
