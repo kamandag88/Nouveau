@@ -124,43 +124,43 @@
                 exitdidnrescue = cpf.get("a3");
                 document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;
 
-                if(coverhead == 1 && coverheadcount == 0) {
+                if(coverhead == 1 && coverheadcount == 0 && document.getElementById("infodiv").className == "show") {
                     setbackgcover();
                     addscore();
                     addcountercover();
                 }
 
-                if(door == 1 && doorcount == 0){
+                if(door == 1 && doorcount == 0 && document.getElementById("infodiv").className == "show"){
                     setbackgdoor();
                     addscore();
                     addcounterdoor();
                 }
 
-                if(getfireext == 1 && getfireextcount == 0){
+                if(getfireext == 1 && getfireextcount == 0 && document.getElementById("infodiv").className == "show"){
                     setbackggetfire();
                     addscore();
                     addcountergetfire();
                 }
 
-                if(usefireext == 1 && usefireextcount == 0){
+                if(usefireext == 1 && usefireextcount == 0 && document.getElementById("infodiv").className == "show"){
                     setbackgusefire();
                     addscore();
                     addcounterusefire();
                 }
 
-                if(firstexit == 1 && firstexitcount == 0){
+                if(firstexit == 1 && firstexitcount == 0 && document.getElementById("infodiv").className == "show"){
                     setbackgfirstexit();
                     addscore();
                     addcounterfirstexit();
                 }
 
-                if(rescueperson == 1 && rescuepersoncount == 0){
+                if(rescueperson == 1 && rescuepersoncount == 0 && document.getElementById("infodiv").className == "show"){
                     setbackgrescueperson();
                     addscore();
                     addcounterrescueperson();
                 }
 
-                if(exitafrescue >= 1000 && exitafrescuecount == 0){
+                if(exitafrescue >= 1000 && exitafrescuecount == 0 && document.getElementById("infodiv").className == "show"){
                     setbackgexitafrescue();
                     addscore();
                     addcounterexitafrescue();
@@ -168,7 +168,7 @@
                     clearInterval(interval);
                 }
 
-                if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0){
+                if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0 && document.getElementById("infodiv").className == "show"){
                     setbackgexitdidnrescue();
                     addscore();
                     addcounterexitdidnrescue();
@@ -279,7 +279,7 @@ function showandhide(){
 
     document.getElementById("modulediv").style.visibility = "hidden";
     document.getElementById("logindiv").className = "show";
-    document.body.style.backgroundImage = "url('img/2ndScreen.jpg')"
+    document.body.style.backgroundImage = "url('img/2ndScreen.jpg')";
 }
 
 function showandhide2() {
@@ -289,29 +289,29 @@ function showandhide2() {
     alert(gradeandsection);
     document.getElementById("logindiv").style.visibility = "hidden";
     document.getElementById("nextdiv").className = "show";
-    document.body.style.backgroundImage = "url('img/3rdScreen.jpg')"
+    document.body.style.backgroundImage = "url('img/3rdScreen.jpg')";
 }
 
 function showandhide3(){
 
     document.getElementById("nextdiv").style.visibility = "hidden";
     document.getElementById("next2div").className = "show";
-    document.body.style.backgroundImage = "url('img/4thScreen.jpg')"
+    document.body.style.backgroundImage = "url('img/4thScreen.jpg')";
 }
 
 function showandhide4(){
 
     document.getElementById("next2div").style.visibility = "hidden";
     document.getElementById("startdiv").className = "show";
-    document.body.style.backgroundImage = "url('img/5thScreen.jpg')"
+    document.body.style.backgroundImage = "url('img/5thScreen.jpg')";
 }
 
 function showandhide5(){
 
     document.getElementById("startdiv").style.visibility = "hidden";
-    document.getElementById("timerdiv").className = "show";
-    document.getElementById("infodiv").className = "show"
-    document.body.style.backgroundImage = "url('img/6thScreen.jpg')"
+    document.getElementById("timerdiv").className = "show";;
+    document.getElementById("infodiv").className = "show";
+    document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
     startnow();
 }
 
@@ -319,8 +319,8 @@ function showandhide6(){
 
     document.getElementById("guidequestionsdiv").style.visibility = "hidden";
     document.getElementById("timerdiv").className = "show";
-    document.getElementById("infodiv").className = "show"
-    document.body.style.backgroundImage = "url('img/6thScreen.jpg')"
+    document.getElementById("infodiv").className = "show";
+    document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
 
 
 }
