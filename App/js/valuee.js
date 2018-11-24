@@ -1,3 +1,70 @@
+//TIMER JS
+
+window.onload = function () {
+  
+  var seconds = 0; 
+  var tens = 0; 
+  var minutes = 0;
+  var appendTens = document.getElementById("tens")
+  var appendSeconds = document.getElementById("seconds")
+  var appendMinutes = document.getElementById("minutes")
+  var buttonStart = document.getElementById('button-start');
+  var buttonStop = document.getElementById('button-stop');
+  var buttonReset = document.getElementById('button-reset');
+  var timervisibility = document.getElementById('timerdiv').className;
+  var Interval ;
+
+    buttonStart.onclick = function(){
+     clearInterval(Interval);
+     Interval = setInterval(startTimer, 10);
+    document.getElementById("button-start").style.visibility = "hidden";
+  }
+
+  
+    buttonStop.onclick = function() {
+       clearInterval(Interval);
+  }
+  
+  function startTimer () {
+    tens++; 
+    
+    if(tens < 9){
+      appendTens.innerHTML = "0" + tens;
+    }
+    
+    if (tens > 9){
+      appendTens.innerHTML = tens;
+      
+    } 
+    
+    if (tens >= 60) {
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+    
+    if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
+    }
+
+    if(seconds >=60){
+      minutes++;
+      appendMinutes.innerHTML = "0" + minutes;
+      seconds = 0;
+      appendSeconds.innerHTML = "0" + 0;
+    }
+  
+    if(minutes > 9){
+      appendMinutes.innerHTML = minutes;
+    }
+  }
+  
+
+}
+
+//CPF JS
+
         setup();
 
         var score = 0;
@@ -209,3 +276,46 @@
             aop.setStore("store0", stringscore);
             document.getElementById("finalscore").innerHTML = stringscore;
         }
+
+//BUTTON FUNCTIONS
+
+function showandhide(){
+
+    document.getElementById("modulediv").style.visibility = "hidden";
+    document.getElementById("logindiv").className = "show";
+    document.body.style.backgroundImage = "url('img/2ndScreen.jpg')"
+}
+
+function showandhide2() {
+    var nameinput = document.getElementById("userInput").value;
+    var gradeandsection = document.getElementById("userGS").value;
+    alert(nameinput);
+    alert(gradeandsection);
+    document.getElementById("logindiv").style.visibility = "hidden";
+    document.getElementById("nextdiv").className = "show";
+    document.body.style.backgroundImage = "url('img/3rdScreen.jpg')"
+}
+
+function showandhide3(){
+
+    document.getElementById("nextdiv").style.visibility = "hidden";
+    document.getElementById("next2div").className = "show";
+    document.body.style.backgroundImage = "url('img/4thScreen.jpg')"
+}
+
+function showandhide4(){
+
+    document.getElementById("next2div").style.visibility = "hidden";
+    document.getElementById("startdiv").className = "show";
+    document.body.style.backgroundImage = "url('img/5thScreen.jpg')"
+}
+
+function showandhide5(){
+
+    document.getElementById("startdiv").style.visibility = "hidden";
+    document.getElementById("timerdiv").className = "show";
+    document.getElementById("infodiv").className = "show"
+    document.body.style.backgroundImage = "url('img/6thScreen.jpg')"
+
+
+}
