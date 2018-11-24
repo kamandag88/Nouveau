@@ -443,6 +443,6 @@ function showandhide17(){
     document.getElementById("statsgands").innerHTML = gradeandsection;
     document.getElementById("statsgamescore").innerHTML = document.getElementById("totalpoint").innerHTML;
     document.getElementById("statsminutes").innerHTML = appendMinutes.innerHTML;     
-    document.getElementById("statsseconds").innerHTML = appendSeconds.innerHTMLs; 
+    document.getElementById("statsseconds").innerHTML = appendSeconds.innerHTML; 
     document.getElementById("statstens").innerHTML = appendTens.innerHTML;   
 }
