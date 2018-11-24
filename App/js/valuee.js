@@ -276,6 +276,8 @@
 //BUTTON FUNCTIONS
 
 var questionscore = 0;
+var nameinput = "";
+var gradeandsection = "";
 
 function showandhide(){
 
@@ -285,8 +287,8 @@ function showandhide(){
 }
 
 function showandhide2() {
-    var nameinput = document.getElementById("userInput").value;
-    var gradeandsection = document.getElementById("userGS").value;
+    nameinput = document.getElementById("userInput").value;
+    gradeandsection = document.getElementById("userGS").value;
     document.getElementById("logindiv").style.visibility = "hidden";
     document.getElementById("nextdiv").className = "show";
     document.body.style.backgroundImage = "url('img/3rdScreen.jpg')";
@@ -439,8 +441,8 @@ function showandhide17(){
     document.getElementById("gqscore").innerHTML = questionscore;
     document.getElementById("statsname").innerHTML = nameinput;
     document.getElementById("statsgands").innerHTML = gradeandsection;
-    document.getElementById("statsgamescore").innerHTML = score;
-    document.getElementById("statsminutes").innerHTML = minutes;     
-    document.getElementById("statsseconds").innerHTML = seconds; 
-    document.getElementById("statstens").innerHTML = tens;   
+    document.getElementById("statsgamescore").innerHTML = document.getElementById("totalpoint").innerHTML;
+    document.getElementById("statsminutes").innerHTML = appendMinutes.innerHTML;     
+    document.getElementById("statsseconds").innerHTML = appendSeconds.innerHTMLs; 
+    document.getElementById("statstens").innerHTML = appendTens.innerHTML;   
 }
