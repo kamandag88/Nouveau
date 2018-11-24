@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Nouveau Classroom</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+
+		<body background="img/HomeScreenV2.jpg">
+	</head>
+
+<body>
+
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="guidequestionsdiv" class="show">
+			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="start2" onclick="showandhide7()">Start</button> 
+	</div>		
+
+	<div style=style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="question1div" class="hidden">
+			<button type="button" " id="q1optA" onclick="showandhide8(q1optA)">Option A</button> 
+			<button type="button" id="q1optB" onclick="showandhide8(q1optB)">Option B</button> 
+			<button type="button" id="q1optC" onclick="showandhide8(q1optC)">Option C</button> 
+			<button type="button" id="q1optD" onclick="showandhide8(q1optD)">Option D</button> 
+	</div>		
+
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question1nextdiv" class="hidden">
+			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="q1next" onclick="showandhide9()">Next</button> 
+	</div>		
+
+	<script>
+		function showandhide7(){
+    		document.getElementById("guidequestionsdiv").style.visibility = "hidden";
+   			document.getElementById("question1div").className = "show";   
+    		document.body.style.backgroundImage = "url('img/Question1.jpg')";
+		}
+
+function showandhide8(options){
+    	document.getElementById("question1div").style.visibility = "hidden";
+    	document.getElementById("question1nextdiv").className = "show";   
+    	var questionscore = 0;
+    	if(options == q1optC){
+        	questionscore = questionscore + 10;
+        	console.log(questionscore);
+        	document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
+    	}
+    	else{
+        	console.log("Wrong Answer");
+        	document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+    	}
+
+	}
+	</script>
+
+</body>			
+</html>
