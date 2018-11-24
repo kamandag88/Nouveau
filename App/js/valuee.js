@@ -165,6 +165,7 @@
                     addscore();
                     addcounterexitafrescue();
                     uploadfinalscore();
+                    showandhide6();
                 }
 
                 if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0 && document.getElementById("infodiv").className == "show"){
@@ -172,6 +173,7 @@
                     addscore();
                     addcounterexitdidnrescue();
                     uploadfinalscore();
+                    showandhide6();
                 }
 
             }
@@ -315,10 +317,16 @@ function showandhide5(){
 
 function showandhide6(){
 
-    document.getElementById("guidequestionsdiv").style.visibility = "hidden";
-    document.getElementById("timerdiv").className = "show";
-    document.getElementById("infodiv").className = "show";
-    document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
+    document.getElementById("timerdiv").style.visibility = "hidden";
+    document.getElementById("infodiv").style.visibility = "hidden";   
+    document.getElementById("guidequestionsdiv").className = "show";
+    document.body.style.backgroundImage = "url('img/GuideQuestions.jpg')";
+}
 
+function showandhide7(){
 
+    document.getElementById("timerdiv").style.visibility = "hidden";
+    document.getElementById("infodiv").style.visibility = "hidden";   
+    document.getElementById("guidequestionsdiv").className = "show";
+    document.body.style.backgroundImage = "url('img/GuideQuestions.jpg')";
 }
