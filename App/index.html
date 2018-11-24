@@ -20,9 +20,11 @@
 	</div>
 
 	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="logindiv" class="hidden">
-			<div>Name: <input type="text" name="username"></div>
-			<div>Grade and Section: <input type="text" name="gradeandsection"></div>
-			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="login" onclick="showandhide2()">Login</button> 
+			<form id="form" onsubmit="return false;">
+    			<div style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%">Full Name: <input type="text" id="userInput" />
+    			Grade and Section: <input type="text" id="userGS" /></div>
+   				<input style="position:absolute; top:60%; left:5%; width:40%;" type="submit" onclick="showandhide2();" />
+			</form>
 	</div>
 
 	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="nextdiv" class="hidden">
@@ -67,10 +69,7 @@
 
 	</div>
 
-
-	<script src="js/button.js"></script>
 	<script src="js/valuee.js"></script>
-	<script src="js/timerr.js"></script>
 
 </body>			
 </html>
