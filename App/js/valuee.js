@@ -323,13 +323,13 @@ function showandhide6(){
 
 function showandhide7(){
     document.getElementById("guidequestionsdiv").style.visibility = "hidden";
-    document.getElementById("question1div").style.visibility = "show";   
+    document.getElementById("question1div").className= "show";   
     document.body.style.backgroundImage = "url('img/Question1.jpg')";
 }
 
 function showandhide8(options){
     document.getElementById("question1div").style.visibility = "hidden";
-    document.getElementById("question1nextdiv").style.visibility = "show";   
+    document.getElementById("question1nextdiv").className = "show";   
     var questionscore = 0;
     if(options == q1optC){
         questionscore = questionscore + 10;
