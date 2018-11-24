@@ -1,7 +1,4 @@
 //TIMER JS
-
-window.onload = function () {
-  
   var seconds = 0; 
   var tens = 0; 
   var minutes = 0;
@@ -12,16 +9,16 @@ window.onload = function () {
   var buttonStop = document.getElementById('button-stop');
   var buttonReset = document.getElementById('button-reset');
   var timervisibility = document.getElementById('timerdiv').className;
-  var Interval ;
+  var Interval;
 
-    buttonStart.onclick = function(){
-     clearInterval(Interval);
-     Interval = setInterval(startTimer, 10);
-    document.getElementById("button-start").style.visibility = "hidden";
+   function startnow(){
+    clearInterval(Interval);
+    Interval = setInterval(startTimer, 10);
+    //document.getElementById("button-start").style.visibility = "hidden";
   }
 
   
-    buttonStop.onclick = function() {
+   function stopnow() {
        clearInterval(Interval);
   }
   
@@ -60,8 +57,6 @@ window.onload = function () {
     }
   }
   
-
-}
 
 //CPF JS
 
@@ -275,6 +270,7 @@ window.onload = function () {
             stringscore = score.toString();
             aop.setStore("store0", stringscore);
             document.getElementById("finalscore").innerHTML = stringscore;
+            stopnow();
         }
 
 //BUTTON FUNCTIONS
@@ -313,6 +309,15 @@ function showandhide4(){
 function showandhide5(){
 
     document.getElementById("startdiv").style.visibility = "hidden";
+    document.getElementById("timerdiv").className = "show";
+    document.getElementById("infodiv").className = "show"
+    document.body.style.backgroundImage = "url('img/6thScreen.jpg')"
+    startnow();
+}
+
+function showandhide6(){
+
+    document.getElementById("guidequestionsdiv").style.visibility = "hidden";
     document.getElementById("timerdiv").className = "show";
     document.getElementById("infodiv").className = "show"
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')"
