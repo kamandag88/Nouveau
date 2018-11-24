@@ -324,9 +324,23 @@ function showandhide6(){
 }
 
 function showandhide7(){
+    document.getElementById("guidequestionsdiv").style.visibility = "hidden";
+    document.getElementById("question1div").style.visibility = "show";   
+    document.body.style.backgroundImage = "url('img/Question1.jpg')";
+}
 
-    document.getElementById("timerdiv").style.visibility = "hidden";
-    document.getElementById("infodiv").style.visibility = "hidden";   
-    document.getElementById("guidequestionsdiv").className = "show";
-    document.body.style.backgroundImage = "url('img/GuideQuestions.jpg')";
+function showandhide8(options){
+    document.getElementById("question1div").style.visibility = "hidden";
+    document.getElementById("question1nextdiv").style.visibility = "show";   
+    var questionscore = 0;
+    if(options == q1optC){
+        questionscore = questionscore + 10;
+        console.log(questionscore);
+        document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
+    }
+    else{
+        console.log("Wrong Answer");
+        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+    }
+
 }
