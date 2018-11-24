@@ -275,6 +275,8 @@
 
 //BUTTON FUNCTIONS
 
+var questionscore = 0;
+
 function showandhide(){
 
     document.getElementById("modulediv").style.visibility = "hidden";
@@ -318,27 +320,127 @@ function showandhide6(){
     document.getElementById("timerdiv").style.visibility = "hidden";
     document.getElementById("infodiv").style.visibility = "hidden";   
     document.getElementById("guidequestionsdiv").className = "show";
+    document.getElementById("qtotalscorediv").className = "show";
     document.body.style.backgroundImage = "url('img/GuideQuestions.jpg')";
 }
 
 function showandhide7(){
     document.getElementById("guidequestionsdiv").style.visibility = "hidden";
-    document.getElementById("question1div").className= "show";   
+    document.getElementById("question1div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question1.jpg')";
-}
+}   
 
 function showandhide8(options){
     document.getElementById("question1div").style.visibility = "hidden";
     document.getElementById("question1nextdiv").className = "show";   
-    var questionscore = 0;
+
     if(options == q1optC){
         questionscore = questionscore + 10;
         console.log(questionscore);
         document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
+        document.getElementById("qtotalscore").innerHTML = questionscore;
     }
-    else{
+    else if(options == q1optA || options == q1optB || options == q1optD){
         console.log("Wrong Answer");
         document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
     }
 
+}
+
+function showandhide9(){
+    document.getElementById("question1nextdiv").style.visibility = "hidden";
+    document.getElementById("question2div").className = "show";   
+    document.body.style.backgroundImage = "url('img/Question2.jpg')";       
+}
+
+function showandhide10(options2){
+    document.getElementById("question2div").style.visibility = "hidden";
+    document.getElementById("question2nextdiv").className = "show";  
+    if(options2 == q2optB){
+        questionscore = questionscore + 10;
+        console.log(questionscore);
+        document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
+        document.getElementById("qtotalscore").innerHTML = questionscore;
+    }
+    else if(options2 == q2optA || options2 == q2optC || options2 == q2optD){
+        console.log("Wrong Answer");
+        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+    } 
+}
+
+function showandhide11(){
+    document.getElementById("question2nextdiv").style.visibility = "hidden";
+    document.getElementById("question3div").className = "show";   
+    document.body.style.backgroundImage = "url('img/Question3.jpg')";       
+}
+
+function showandhide12(options3){
+    document.getElementById("question3div").style.visibility = "hidden";
+    document.getElementById("question3nextdiv").className = "show";  
+    if(options3 == q3optC){
+        questionscore = questionscore + 10;
+        console.log(questionscore);
+        document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
+        document.getElementById("qtotalscore").innerHTML = questionscore;
+    }
+    else if(options3 == q3optA || options3 == q3optB || options3 == q3optD){
+        console.log("Wrong Answer");
+        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+    } 
+}
+
+function showandhide13(){
+    document.getElementById("question3nextdiv").style.visibility = "hidden";
+    document.getElementById("question4div").className = "show";   
+    document.body.style.backgroundImage = "url('img/Question4.jpg')";       
+}
+
+function showandhide14(options4){
+    document.getElementById("question4div").style.visibility = "hidden";
+    document.getElementById("question4nextdiv").className = "show";  
+    if(options4 == q4optD){
+        questionscore = questionscore + 10;
+        console.log(questionscore);
+        document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
+        document.getElementById("qtotalscore").innerHTML = questionscore;
+    }
+    else if(options4 == q4optA || options4 == q4optB || options4 == q4optC){
+        console.log("Wrong Answer");
+        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+    } 
+}
+
+function showandhide15(){
+    document.getElementById("question4nextdiv").style.visibility = "hidden";
+    document.getElementById("question5div").className = "show";   
+    document.body.style.backgroundImage = "url('img/Question5.jpg')";       
+}
+
+function showandhide16(options5){
+    document.getElementById("question5div").style.visibility = "hidden";
+    document.getElementById("question5nextdiv").className = "show";  
+    if(options5 == q5optA){
+        questionscore = questionscore + 10;
+        console.log(questionscore);
+        document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
+        document.getElementById("qtotalscore").innerHTML = questionscore;
+    }
+    else if(options5 == q5optB || options5 == q5optC || options5 == q5optD){
+        console.log("Wrong Answer");
+        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+    } 
+}
+
+function showandhide17(){
+    document.getElementById("question5nextdiv").style.visibility = "hidden";
+    document.getElementById("qtotalscorediv").style.visibility = "hidden";
+    document.getElementById("statsdiv").className = "show";   
+    document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
+    document.getElementById("gqscore").innerHTML = questionscore;
+    document.getElementById("statsname").innerHTML = nameinput;
+    document.getElementById("statsgands").innerHTML = gradeandsection;
+    document.getElementById("statsgamescore").innerHTML = score;
+    document.getElementById("statsminutes").innerHTML = minutes;     
+    document.getElementById("statsseconds").innerHTML = seconds; 
+    document.getElementById("statstens").innerHTML = tens;   
 }
