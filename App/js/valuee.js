@@ -147,12 +147,14 @@
                         setbackggetfire();
                         addscore();
                         addcountergetfire();
+                        showquestion3();
                     }
 
                     if(usefireext == 1 && usefireextcount == 0){
                         setbackgusefire();
                         addscore();
                         addcounterusefire();
+                        showquestion4();
                     }
 
                     if(firstexit == 1 && firstexitcount == 0){
@@ -172,7 +174,7 @@
                         addscore();
                         addcounterexitafrescue();
                         uploadfinalscore();
-                        showandhide6();
+                        showquestion5();
                     }
 
                     if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0){
@@ -180,7 +182,7 @@
                         addscore();
                         addcounterexitdidnrescue();
                         uploadfinalscore();
-                        showandhide6();
+                        showquestion5();
                     }
                 }
 
@@ -387,7 +389,7 @@ function showquestion3(){
     document.getElementById("timerdiv").style.visibility = "hidden";
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question3div").className = "show";   
-    document.body.style.backgroundImage = "url('img/Question3.jpg')";       
+    document.body.style.backgroundImage = "url('img/Question4.jpg')";       
 }
 
 function showquestion3answer(options3){
@@ -409,7 +411,7 @@ function showquestion4(){
     document.getElementById("timerdiv").style.visibility = "hidden";
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question4div").className = "show";   
-    document.body.style.backgroundImage = "url('img/Question4.jpg')";       
+    document.body.style.backgroundImage = "url('img/Question3.jpg')";       
 }
 
 function showquestion4answer(options4){
