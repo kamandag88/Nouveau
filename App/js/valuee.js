@@ -89,6 +89,8 @@
         var exitdidnrescue;
         var exitdidnrescuecount = 0;
 
+        var infodiv;
+
         function setup(){
         if(cpf)
             cpf.setPinMode('["resetPin"],["setPinMode", "digital", 2,"INPUT"],["setPinMode", "digital", 3,"INPUT"],["setPinMode", "digital", 4,"INPUT"],["setPinMode", "digital", 5,"INPUT"],["setPinMode", "digital", 6,"INPUT"],["setPinMode", "digital", 7,"INPUT"],["setPinMode", "analog", 2,"INPUT"],["setPinMode", "analog", 3,"INPUT"]');
@@ -124,56 +126,60 @@
                 exitdidnrescue = cpf.get("a3");
                 document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;
 
-                if(coverhead == 1 && coverheadcount == 0 && document.getElementById("infodiv").className == "show") {
-                    setbackgcover();
-                    addscore();
-                    addcountercover();
-                }
+                infodiv = document.getElementById("infodiv").className;
 
-                if(door == 1 && doorcount == 0 && document.getElementById("infodiv").className == "show"){
-                    setbackgdoor();
-                    addscore();
-                    addcounterdoor();
-                }
+                if(infodiv == "show"){
+                    if(coverhead == 1 && coverheadcount == 0) {
+                        setbackgcover();
+                        addscore();
+                        addcountercover();
+                    }
 
-                if(getfireext == 1 && getfireextcount == 0 && document.getElementById("infodiv").className == "show"){
-                    setbackggetfire();
-                    addscore();
-                    addcountergetfire();
-                }
+                    if(door == 1 && doorcount == 0){
+                        setbackgdoor();
+                        addscore();
+                        addcounterdoor();
+                    }
 
-                if(usefireext == 1 && usefireextcount == 0 && document.getElementById("infodiv").className == "show"){
-                    setbackgusefire();
-                    addscore();
-                    addcounterusefire();
-                }
+                    if(getfireext == 1 && getfireextcount == 0){
+                        setbackggetfire();
+                        addscore();
+                        addcountergetfire();
+                    }
 
-                if(firstexit == 1 && firstexitcount == 0 && document.getElementById("infodiv").className == "show"){
-                    setbackgfirstexit();
-                    addscore();
-                    addcounterfirstexit();
-                }
+                    if(usefireext == 1 && usefireextcount == 0){
+                        setbackgusefire();
+                        addscore();
+                        addcounterusefire();
+                    }
 
-                if(rescueperson == 1 && rescuepersoncount == 0 && document.getElementById("infodiv").className == "show"){
-                    setbackgrescueperson();
-                    addscore();
-                    addcounterrescueperson();
-                }
+                    if(firstexit == 1 && firstexitcount == 0){
+                        setbackgfirstexit();
+                        addscore();
+                        addcounterfirstexit();
+                    }
 
-                if(exitafrescue >= 1000 && exitafrescuecount == 0 && document.getElementById("infodiv").className == "show"){
-                    setbackgexitafrescue();
-                    addscore();
-                    addcounterexitafrescue();
-                    uploadfinalscore();
-                    showandhide6();
-                }
+                    if(rescueperson == 1 && rescuepersoncount == 0){
+                        setbackgrescueperson();
+                        addscore();
+                        addcounterrescueperson();
+                    }
 
-                if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0 && document.getElementById("infodiv").className == "show"){
-                    setbackgexitdidnrescue();
-                    addscore();
-                    addcounterexitdidnrescue();
-                    uploadfinalscore();
-                    showandhide6();
+                    if(exitafrescue >= 1000 && exitafrescuecount == 0){
+                        setbackgexitafrescue();
+                        addscore();
+                        addcounterexitafrescue();
+                        uploadfinalscore();
+                        showandhide6();
+                    }
+
+                    if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0){
+                        setbackgexitdidnrescue();
+                        addscore();
+                        addcounterexitdidnrescue();
+                        uploadfinalscore();
+                        showandhide6();
+                    }
                 }
 
             }
