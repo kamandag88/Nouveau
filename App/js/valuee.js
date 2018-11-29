@@ -436,7 +436,7 @@ function showquestion5(){
     document.body.style.backgroundImage = "url('img/Question2.jpg')";       
 }
 
-function showandhide16(options5){
+function showquestion5answer(options5){
     document.getElementById("question5div").style.visibility = "hidden";
     document.getElementById("question5nextdiv").className = "show";  
     if(options5 == q5optA){
