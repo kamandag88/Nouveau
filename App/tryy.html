@@ -15,199 +15,69 @@
 
 <body>
 
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="qtotalscorediv" class="show"> <span id="qtotalscore">0</span> </div>	
-
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="guidequestionsdiv" class="show">
-			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="start2" onclick="showandhide7()">Start</button> 
-	</div>		
-
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question1div" class="hidden">
-		<div style="margin-left:30%; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%">
-			<button type="button" id="q1optA" onclick="showandhide8(q1optA)">Option A</button> 
-			<button type="button" id="q1optB" onclick="showandhide8(q1optB)">Option B</button> 
-			<button type="button" id="q1optC" onclick="showandhide8(q1optC)">Option C</button> 
-			<button type="button" id="q1optD" onclick="showandhide8(q1optD)">Option D</button> 
-		</div>
-	</div>		
-
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question1nextdiv" class="hidden">
-			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="q1next" onclick="showandhide9()">Next</button> 
-	</div>		
-
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question2div" class="hidden">
-		<div style="margin-left:30%; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%">
-			<button type="button" id="q2optA" onclick="showandhide10(q2optA)">Option A</button> 
-			<button type="button" id="q2optB" onclick="showandhide10(q2optB)">Option B</button> 
-			<button type="button" id="q2optC" onclick="showandhide10(q2optC)">Option C</button> 
-			<button type="button" id="q2optD" onclick="showandhide10(q2optD)">Option D</button> 
-		</div>
-	</div>		
-
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question2nextdiv" class="hidden">
-			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="q2next" onclick="showandhide11()">Next</button> 
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="qtotalscorediv" class="show"> <span id="qtotalscore">0</span> 
+			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="start" onclick="showquestion5()">start</button> 
 	</div>	
 
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question3div" class="hidden">
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; display:none;" id="question5div" class="hidden">
 		<div style="margin-left:30%; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%">
-			<button type="button" id="q3optA" onclick="showandhide12(q3optA)">Option A</button> 
-			<button type="button" id="q3optB" onclick="showandhide12(q3optB)">Option B</button> 
-			<button type="button" id="q3optC" onclick="showandhide12(q3optC)">Option C</button> 
-			<button type="button" id="q3optD" onclick="showandhide12(q3optD)">Option D</button> 
+			<button type="button" id="q5optA" onclick="showquestion5answer(q5optA)">Option A</button> 
+			<button type="button" id="q5optB" onclick="showquestion5answer(q5optB)">Option B</button> 
+			<button type="button" id="q5optC" onclick="showquestion5answer(q5optC)">Option C</button> 
+			<button type="button" id="q5optD" onclick="showquestion5answer(q5optD)">Option D</button> 
 		</div>
 	</div>		
 
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question3nextdiv" class="hidden">
-			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="q3next" onclick="showandhide13()">Next</button> 
-	</div>	
-
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question4div" class="hidden">
-		<div style="margin-left:30%; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%">
-			<button type="button" id="q4optA" onclick="showandhide14(q4optA)">Option A</button> 
-			<button type="button" id="q4optB" onclick="showandhide14(q4optB)">Option B</button> 
-			<button type="button" id="q4optC" onclick="showandhide14(q4optC)">Option C</button> 
-			<button type="button" id="q4optD" onclick="showandhide14(q4optD)">Option D</button> 
-		</div>
-	</div>		
-
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question4nextdiv" class="hidden">
-			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="q4next" onclick="showandhide15()">Next</button> 
-	</div>	
-
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question5div" class="hidden">
-		<div style="margin-left:30%; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%">
-			<button type="button" id="q5optA" onclick="showandhide16(q5optA)">Option A</button> 
-			<button type="button" id="q5optB" onclick="showandhide16(q5optB)">Option B</button> 
-			<button type="button" id="q5optC" onclick="showandhide16(q5optC)">Option C</button> 
-			<button type="button" id="q5optD" onclick="showandhide16(q5optD)">Option D</button> 
-		</div>
-	</div>		
-
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="question5nextdiv" class="hidden">
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; display:none;" id="question5nextdiv" class="hidden">
 			<button type="button" style="margin-left:auto; margin-right:auto; display:block; margin-top:40%; margin-bottom:0%" id="q5next" onclick="showandhide17()">Finish</button> 
 	</div>	
 
-	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; align:center; display:none;" id="statsdiv" class="hidden">
+	<div style="width:100%; height:100%; position:absolute; vertical-align:middle; display:none;" id="statsdiv" class="hidden">
+		<div>Name: <span id="statsname"></span></div>
+		<div>Grade and Section: <span id="statsgands"></span></div>
+		<div>Game Score: <span id="statsgamescore">0</span></div>
+		<div>Time: <span id="statsminutes">0</span>:<span id="statsseconds">0</span>:<span id="statstens">0</span></div>
 		<div>Guide Questions' Score: <span id="gqscore">0</span></div>
-	</div>	
+	</div>		
 
 	<script>
 
     		var questionscore = 0;
-		function showandhide7(){
-    		document.getElementById("guidequestionsdiv").style.visibility = "hidden";
-   			document.getElementById("question1div").className = "show";   
-    		document.body.style.backgroundImage = "url('img/Question1.jpg')";
-		}
+			function showquestion5(){
+			    document.getElementById("timerdiv").style.visibility = "hidden";
+			    document.getElementById("infodiv").style.visibility = "hidden";
+			    document.getElementById("question5div").className = "show";   
+			    document.body.style.backgroundImage = "url('img/Question2.jpg')";       
+			}
 
-		function showandhide8(options){
-    		document.getElementById("question1div").style.visibility = "hidden";
-    		document.getElementById("question1nextdiv").className = "show";   
+			function showquestion5answer(options5){
+			    document.getElementById("question5div").style.visibility = "hidden";
+			    document.getElementById("question5nextdiv").className = "show";  
+			    if(options5 == q5optA){
+			        questionscore = questionscore + 10;
+			        console.log(questionscore);
+			        document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
+			        document.getElementById("qtotalscore").innerHTML = questionscore;
+			    }
+			    else if(options5 == q5optB || options5 == q5optC || options5 == q5optD){
+			        console.log("Wrong Answer - Question 5");
+			        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+			    } 
+			}
 
-    		if(options == q1optC){
-        		questionscore = questionscore + 10;
-        		console.log(questionscore);
-        		document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
-           		document.getElementById("qtotalscore").innerHTML = questionscore;
-    		}
-    		else if(options == q1optA || options == q1optB || options == q1optD){
-        		console.log("Wrong Answer");
-        		document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
-    		}
-
-		}
-
-		function showandhide9(){
-    		document.getElementById("question1nextdiv").style.visibility = "hidden";
-   			document.getElementById("question2div").className = "show";   
-    		document.body.style.backgroundImage = "url('img/Question2.jpg')";		
-		}
-
-		function showandhide10(options2){
-    		document.getElementById("question2div").style.visibility = "hidden";
-    		document.getElementById("question2nextdiv").className = "show";  
-			if(options2 == q2optB){
-        		questionscore = questionscore + 10;
-        		console.log(questionscore);
-        		document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
-           		document.getElementById("qtotalscore").innerHTML = questionscore;
-    		}
-    		else if(options2 == q2optA || options2 == q2optC || options2 == q2optD){
-        		console.log("Wrong Answer");
-        		document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
-    		} 
-		}
-
-		function showandhide11(){
-    		document.getElementById("question2nextdiv").style.visibility = "hidden";
-   			document.getElementById("question3div").className = "show";   
-    		document.body.style.backgroundImage = "url('img/Question3.jpg')";		
-		}
-
-		function showandhide12(options3){
-    		document.getElementById("question3div").style.visibility = "hidden";
-    		document.getElementById("question3nextdiv").className = "show";  
-			if(options3 == q3optC){
-        		questionscore = questionscore + 10;
-        		console.log(questionscore);
-        		document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
-           		document.getElementById("qtotalscore").innerHTML = questionscore;
-    		}
-    		else if(options3 == q3optA || options3 == q3optB || options3 == q3optD){
-        		console.log("Wrong Answer");
-        		document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
-    		} 
-		}
-
-		function showandhide13(){
-    		document.getElementById("question3nextdiv").style.visibility = "hidden";
-   			document.getElementById("question4div").className = "show";   
-    		document.body.style.backgroundImage = "url('img/Question4.jpg')";		
-		}
-
-		function showandhide14(options4){
-    		document.getElementById("question4div").style.visibility = "hidden";
-    		document.getElementById("question4nextdiv").className = "show";  
-			if(options4 == q4optD){
-        		questionscore = questionscore + 10;
-        		console.log(questionscore);
-        		document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
-           		document.getElementById("qtotalscore").innerHTML = questionscore;
-    		}
-    		else if(options4 == q4optA || options4 == q4optB || options4 == q4optC){
-        		console.log("Wrong Answer");
-        		document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
-    		} 
-		}
-
-		function showandhide15(){
-    		document.getElementById("question4nextdiv").style.visibility = "hidden";
-   			document.getElementById("question5div").className = "show";   
-    		document.body.style.backgroundImage = "url('img/Question5.jpg')";		
-		}
-
-		function showandhide16(options5){
-    		document.getElementById("question5div").style.visibility = "hidden";
-    		document.getElementById("question5nextdiv").className = "show";  
-			if(options5 == q5optA){
-        		questionscore = questionscore + 10;
-        		console.log(questionscore);
-        		document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
-           		document.getElementById("qtotalscore").innerHTML = questionscore;
-    		}
-    		else if(options5 == q5optB || options5 == q5optC || options5 == q5optD){
-        		console.log("Wrong Answer");
-        		document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
-    		} 
-		}
-
-		function showandhide17(){
-    		document.getElementById("question5nextdiv").style.visibility = "hidden";
-    		document.getElementById("qtotalscorediv").style.visibility = "hidden";
-   			document.getElementById("statsdiv").className = "show";   
-    		document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
-           	document.getElementById("gqscore").innerHTML = questionscore;		
-		}
-
+			function showandhide17(){
+			    document.getElementById("question5nextdiv").style.visibility = "hidden";
+			    document.getElementById("qtotalscorediv").style.visibility = "hidden";
+			    document.getElementById("statsdiv").className = "show";   
+			    document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
+			    document.getElementById("gqscore").innerHTML = questionscore;
+			    document.getElementById("statsname").innerHTML = nameinput;
+			    document.getElementById("statsgands").innerHTML = gradeandsection;
+			    document.getElementById("statsgamescore").innerHTML = document.getElementById("totalpoint").innerHTML;
+			    document.getElementById("statsminutes").innerHTML = appendMinutes.innerHTML;     
+			    document.getElementById("statsseconds").innerHTML = appendSeconds.innerHTML; 
+			    document.getElementById("statstens").innerHTML = appendTens.innerHTML;   
+			}
 	</script>
 
 </body>			
