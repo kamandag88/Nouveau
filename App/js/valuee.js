@@ -455,7 +455,7 @@ function showquestion5answer(options5){
 function showandhide17(){
     document.getElementById("question5nextdiv").style.visibility = "hidden";
     document.getElementById("statsdiv").className = "show";   
-    console.log(document.getElementById("statsdiv").classNam);
+    console.log(document.getElementById("statsdiv").className);
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
     document.getElementById("gqscore").innerHTML = questionscore;
     document.getElementById("statsname").innerHTML = nameinput;
