@@ -96,7 +96,7 @@
         var storeId = "store" + 0;
         var valstring = "";
 
-        var alwaysshow;
+        var alwaysshow = 0;
 
         function setup(){
         if(cpf)
@@ -108,8 +108,6 @@
         function loop(){
 
             if(cpf){
-
-                alwaysshow = document.getElementById("alwaysshow").className;
 
                 coverhead = cpf.get("d2");
                 document.getElementById("cover").innerHTML = coverhead; 
@@ -135,7 +133,7 @@
                 exitdidnrescue = cpf.get("a3");
                 document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;
 
-                if(alwaysshow == "show"){
+                if(alwaysshow == 1){
                     if(coverhead == 1 && coverheadcount == 0) {
                         setbackgcover();
                         addscore();
@@ -320,7 +318,7 @@ function showandhide5(){
     document.getElementById("startdiv").style.visibility = "hidden";
     document.getElementById("timerdiv").className = "show";
     document.getElementById("infodiv").className = "show";
-    document.getElementById("alwaysshow").className = "show";
+    alwaysshow = alwaysshow + 1;
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
     startnow();
 }
