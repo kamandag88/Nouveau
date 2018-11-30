@@ -109,6 +109,8 @@
 
             if(cpf){
 
+                alwaysshow = document.getElementById("alwaysshow").className;
+
                 coverhead = cpf.get("d2");
                 document.getElementById("cover").innerHTML = coverhead; 
 
@@ -132,8 +134,6 @@
 
                 exitdidnrescue = cpf.get("a3");
                 document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;
-
-                alwaysshow = document.getElementById("alwaysshow").className;
 
                 if(alwaysshow == "show"){
                     if(coverhead == 1 && coverheadcount == 0) {
