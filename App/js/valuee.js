@@ -89,7 +89,12 @@
         var exitdidnrescue;
         var exitdidnrescuecount = 0;
 
-        var infodiv;
+        var questionscore = 0;
+        var nameinput = "";
+        var gradeandsection = "";
+        var valarray = [];
+        var storeId = "store" + 0;
+        var valstring = "";
 
         function setup(){
         if(cpf)
@@ -278,19 +283,7 @@
             document.getElementById("exitdidnotrescuecount").innerHTML = exitdidnrescuecount;
         }
 
-        function uploadfinalscore(){
-            stringscore = score.toString();
-            aop.setStore("store0", stringscore);
-            document.getElementById("finalscore").innerHTML = stringscore;
-            stopnow();
-        }
-
 //BUTTON FUNCTIONS
-
-var questionscore = 0;
-var nameinput = "";
-var gradeandsection = "";
-
 function showandhide(){
 
     document.getElementById("modulediv").style.visibility = "hidden";
@@ -453,6 +446,15 @@ function showquestion5answer(options5){
     } 
 }
 
+function uploadfinalscore(){
+        document.getElementById("finalscore").innerHTML = score;
+        stopnow();
+        storeId = "store" + gradeandsection;
+        valarray = {"studentname": nameinput; "classnumber": gradeandsection; "gamescore": score; "questscore": questionscore; "timeminutes": appendMinutes.innerHTML; "timeseconds": appendSeconds.innerHTML; "timetens": appendTens.innerHTML};
+        valstring = JSON.stringify(valarray);
+        aop.setStore(storeId, valarray);
+        }
+
 function showandhide17(){
     document.getElementById("question5nextdiv").style.visibility = "hidden";
     document.getElementById("statsdiv").className = "show";   
@@ -461,8 +463,9 @@ function showandhide17(){
     document.getElementById("gqscore").innerHTML = questionscore;
     document.getElementById("statsname").innerHTML = nameinput;
     document.getElementById("statsgands").innerHTML = gradeandsection;
-    document.getElementById("statsgamescore").innerHTML = document.getElementById("totalpoint").innerHTML;
+    document.getElementById("statsgamescore").innerHTML = score;
     document.getElementById("statsminutes").innerHTML = appendMinutes.innerHTML;     
     document.getElementById("statsseconds").innerHTML = appendSeconds.innerHTML; 
     document.getElementById("statstens").innerHTML = appendTens.innerHTML;   
 }
+
