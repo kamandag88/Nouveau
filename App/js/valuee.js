@@ -178,7 +178,6 @@
                         if(exitdidnrescue >= 1000 && exitdidnrescuecount ==0){
                             setbackgexitdidnrescue();
                             addscore();
-                            uploadfinalscore();
                             addcounterexitdidnrescue();
                             showquestion5();
                         }
@@ -187,7 +186,6 @@
                     if(exitafrescue >= 1000 && exitdidnrescuecount ==0){
                             setbackgexitafrescue();
                             addscore();
-                            uploadfinalscore();
                             addcounterexitafrescue(); 
                             showquestion5();                           
                         }
@@ -470,5 +468,6 @@ function showandhide17(){
     document.getElementById("statsminutes").innerHTML = appendMinutes.innerHTML;     
     document.getElementById("statsseconds").innerHTML = appendSeconds.innerHTML; 
     document.getElementById("statstens").innerHTML = appendTens.innerHTML;   
+    uploadfinalscore();
 }
 
