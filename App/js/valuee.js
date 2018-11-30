@@ -169,20 +169,22 @@
                         addcounterrescueperson();
                     }
 
-                    if(exitafrescue < 1000){
-                        if(exitdidnrescue >= 1000){
+                    if(exitafrescue < 1000 && exitafrescuecount == 0){
+                        if(exitdidnrescue >= 1000 && exitdidnrescuecount ==0){
                             setbackgexitdidnrescue();
                             addscore();
                             uploadfinalscore();
+                            addcounterexitdidnrescue();
                             showquestion5();
                         }
                     }
 
-                    if(exitafrescue >= 1000){
+                    if(exitafrescue >= 1000 && exitdidnrescuecount ==0){
                             setbackgexitafrescue();
                             addscore();
                             uploadfinalscore();
-                            showquestion5();                            
+                            addcounterexitafrescue(); 
+                            showquestion5();                           
                         }
                  }
 
@@ -264,6 +266,16 @@
         function addcounterrescueperson(){
             rescuepersoncount = rescuepersoncount + 1;
             document.getElementById("rescuecount").innerHTML = rescuepersoncount;
+        }
+
+        function addcounterexitafrescue(){
+            exitafrescuecount = exitafrescuecount + 1;
+            document.getElementById("exitafterrescuecount").innerHTML = exitafrescuecount;
+        }
+
+        function addcounterexitdidnrescue(){
+            exitdidnrescuecount = exitdidnrescuecount + 1;
+            document.getElementById("exitdidnotrescuecount").innerHTML = exitdidnrescuecount;
         }
 
         function uploadfinalscore(){
