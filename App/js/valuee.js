@@ -454,7 +454,6 @@ function showquestion5answer(options5){
 
 function showandhide17(){
     document.getElementById("question5nextdiv").style.visibility = "hidden";
-    document.getElementById("qtotalscorediv").style.visibility = "hidden";
     document.getElementById("statsdiv").className = "show";   
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
     document.getElementById("gqscore").innerHTML = questionscore;
