@@ -423,7 +423,6 @@ function showquestion5(){
     document.getElementById("timerdiv").style.visibility = "hidden";
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question5div").className = "show";   
-    console.log(document.getElementById("question5div").className)
     document.body.style.backgroundImage = "url('img/Question2.jpg')";       
 }
 
