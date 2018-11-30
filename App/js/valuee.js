@@ -373,13 +373,13 @@ function showquestion2(){
 function showquestion2answer(options2){
     document.getElementById("question2div").style.visibility = "hidden";
     document.getElementById("question2nextdiv").className = "show";  
-    if(options2 == q2optB){
+    if(options2 == q2optA){
         questionscore = questionscore + 10;
         console.log(questionscore);
         document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
         document.getElementById("qtotalscore").innerHTML = questionscore;
     }
-    else if(options2 == q2optA || options2 == q2optC || options2 == q2optD){
+    else if(options2 == q2optB || options2 == q2optC || options2 == q2optD){
         console.log("Wrong Answer - Question 2");
         document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
     } 
@@ -395,13 +395,13 @@ function showquestion3(){
 function showquestion3answer(options3){
     document.getElementById("question3div").style.visibility = "hidden";
     document.getElementById("question3nextdiv").className = "show";  
-    if(options3 == q3optC){
+    if(options3 == q3optD){
         questionscore = questionscore + 10;
         console.log(questionscore);
         document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
         document.getElementById("qtotalscore").innerHTML = questionscore;
     }
-    else if(options3 == q3optA || options3 == q3optB || options3 == q3optD){
+    else if(options3 == q3optA || options3 == q3optB || options3 == q3optC){
         console.log("Wrong Answer - Question 3");
         document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
     } 
@@ -417,13 +417,13 @@ function showquestion4(){
 function showquestion4answer(options4){
     document.getElementById("question4div").style.visibility = "hidden";
     document.getElementById("question4nextdiv").className = "show";  
-    if(options4 == q4optD){
+    if(options4 == q4optC){
         questionscore = questionscore + 10;
         console.log(questionscore);
         document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
         document.getElementById("qtotalscore").innerHTML = questionscore;
     }
-    else if(options4 == q4optA || options4 == q4optB || options4 == q4optC){
+    else if(options4 == q4optA || options4 == q4optB || options4 == q4optD){
         console.log("Wrong Answer - Question 4");
         document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
     } 
@@ -440,13 +440,13 @@ function showquestion5(){
 function showquestion5answer(options5){
     document.getElementById("question5div").style.visibility = "hidden";
     document.getElementById("question5nextdiv").className = "show";  
-    if(options5 == q5optA){
+    if(options5 == q5optB){
         questionscore = questionscore + 10;
         console.log(questionscore);
         document.body.style.backgroundImage = "url('img/Question1Correct.jpg')";
         document.getElementById("qtotalscore").innerHTML = questionscore;
     }
-    else if(options5 == q5optB || options5 == q5optC || options5 == q5optD){
+    else if(options5 == q5optA || options5 == q5optC || options5 == q5optD){
         console.log("Wrong Answer - Question 5");
         document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
     } 
