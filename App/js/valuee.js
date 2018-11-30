@@ -434,7 +434,6 @@ function showquestion5(){
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question5div").className = "show";   
     console.log(document.getElementById("question5div").className)
-    console.log("show na dis");
     document.body.style.backgroundImage = "url('img/Question2.jpg')";       
 }
 
