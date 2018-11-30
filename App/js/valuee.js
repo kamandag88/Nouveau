@@ -169,22 +169,22 @@
                         addcounterrescueperson();
                     }
 
-                    if(exitafrescue >= 1000 && exitafrescuecount == 0){
-                        setbackgexitafrescue();
-                        addscore();
-                        addcounterexitafrescue();
-                        uploadfinalscore();
-                        showquestion5();
+                    if(exitafrescue < 1000){
+                        if(exitdidnrescue >= 1000){
+                            setbackgexitdidnrescue();
+                            addscore();
+                            uploadfinalscore();
+                            showquestion5();
+                        }
                     }
 
-                    if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0){
-                        setbackgexitdidnrescue();
-                        addscore();
-                        addcounterexitdidnrescue();
-                        uploadfinalscore();
-                        showquestion5();
-                    }
-                }
+                    if(exitafrescue >= 1000){
+                            setbackgexitafrescue();
+                            addscore();
+                            uploadfinalscore();
+                            showquestion5();                            
+                        }
+                 }
 
             }
 
@@ -264,16 +264,6 @@
         function addcounterrescueperson(){
             rescuepersoncount = rescuepersoncount + 1;
             document.getElementById("rescuecount").innerHTML = rescuepersoncount;
-        }
-
-        function addcounterexitafrescue(){
-            exitafrescuecount = exitafrescuecount + 1;
-            document.getElementById("exitafterrescuecount").innerHTML = exitafrescuecount;
-        }
-
-        function addcounterexitdidnrescue(){
-            exitdidnrescuecount = exitdidnrescuecount + 1;
-            document.getElementById("exitdidnotrescuecount").innerHTML = exitdidnrescuecount;
         }
 
         function uploadfinalscore(){
