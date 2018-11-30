@@ -450,8 +450,11 @@ function uploadfinalscore(){
         document.getElementById("finalscore").innerHTML = score;
         stopnow();
         storeId = "store" + gradeandsection;
+        console.log(storeId);
         valarray = {"studentname": nameinput, "classnumber": gradeandsection, "gamescore": score, "questscore": questionscore, "timeminutes": appendMinutes.innerHTML, "timeseconds": appendSeconds.innerHTML, "timetens": appendTens.innerHTML};
+        console.log(valarray);
         valstring = JSON.stringify(valarray);
+        console.log(valstring);
         aop.setStore(storeId, valarray);
         }
 
