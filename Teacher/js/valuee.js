@@ -22,5 +22,4 @@
         document.getElementById("statsminutes").innerHTML = valdwd.timeminutes;
         document.getElementById("statsseconds").innerHTML = valdwd.timeseconds;
         document.getElementById("statstens").innerHTML = valdwd.timetens;
-
         }
