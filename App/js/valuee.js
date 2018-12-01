@@ -14,7 +14,6 @@
    function startnow(){
     clearInterval(Interval);
     Interval = setInterval(startTimer, 10);
-    //document.getElementById("button-start").style.visibility = "hidden";
   }
 
   
@@ -65,28 +64,20 @@
         var score = 0;
         var stringscore;
 
-        //var coverhead;
         var coverheadcount = 0;
 
-        //var door;
         var doorcount = 0;
 
-        //var getfireext;
         var getfireextcount = 0;
 
-        //var usefireext;
         var usefireextcount = 0;
 
-        //var firstexit;
         var firstexitcount = 0;
 
-        //var rescueperson;
         var rescuepersoncount = 0;
 
-        //var exitafrescue;
         var exitafrescuecount = 0;
 
-        //var exitdidnrescue;
         var exitdidnrescuecount = 0;
 
         var questionscore = 0;
@@ -107,37 +98,13 @@
 
             if(cpf){
 
-                /*coverhead = cpf.get("d2");
-                document.getElementById("cover").innerHTML = coverhead; 
-
-                door = cpf.get("d3");
-                document.getElementById("door").innerHTML = door;
-
-                getfireext = cpf.get("d4");
-                document.getElementById("getfire").innerHTML = getfireext;
-
-                usefireext = cpf.get("d5");
-                document.getElementById("usefire").innerHTML = usefireext;
-
-                firstexit = cpf.get("d7");
-                document.getElementById("firstexit").innerHTML = firstexit;
-
-                rescueperson = cpf.get("d6");
-                document.getElementById("rescue").innerHTML = rescueperson;
-
-                exitafrescue = cpf.get("a2");
-                document.getElementById("exitafterrescue").innerHTML = exitafrescue;
-
-                exitdidnrescue = cpf.get("a3");
-                document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;*/
-
                 if(cpf.get("d2") == 1 && coverheadcount == 0) {
                         setbackgcover();
                         addscore();
                         addcountercover();
                     }
 
-                /*else if(cpf.get("d3") == 1 && doorcount == 0){
+                else if(cpf.get("d3") == 1 && doorcount == 0){
                         setbackgdoor();
                         addscore();
                         addcounterdoor();
@@ -179,7 +146,7 @@
                             setbackgexitafrescue();
                             addscore();
                             addcounterexitafrescue();                       
-                        }*/
+                        }
                  
 
             }
@@ -310,20 +277,16 @@ function showandhide5(){
 
     document.getElementById("startdiv").style.visibility = "hidden";
     document.getElementById("timerdiv").className = "show";
-    document.getElementById("infodiv").className = "show";
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
     startnow();
     loop();
 }
 
 function resume(){
-    document.getElementById("infodiv").className = "show";
-    document.getElementById("infodiv").style.visibility = "show";
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";    
 }
 
 function showquestion1(){
-    document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question1div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question1.jpg')";
 }   
@@ -347,7 +310,6 @@ function showquestion1answer(options){
 }
 
 function showquestion2(){
-    document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question2div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question5.jpg')";       
 }
@@ -368,7 +330,6 @@ function showquestion2answer(options2){
 }
 
 function showquestion3(){
-    document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question3div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question4.jpg')";       
 }
@@ -389,7 +350,6 @@ function showquestion3answer(options3){
 }
 
 function showquestion4(){
-    document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question4div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question3.jpg')";       
 }
@@ -410,7 +370,6 @@ function showquestion4answer(options4){
 }
 
 function showquestion5(){
-    document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question5div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question2.jpg')";     
 }
