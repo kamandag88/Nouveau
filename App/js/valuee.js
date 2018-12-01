@@ -455,7 +455,7 @@ function uploadfinalscore(){
         console.log(valarray);
         valstring = JSON.stringify(valarray);
         console.log(valstring);
-        aop.setStore(storeId, valarray);
+        aop.setStore(storeId, valstring);
         }
 
 function showandhide17(){
