@@ -86,6 +86,7 @@
         var valarray = [];
         var storeId = "store" + 0;
         var valstring = "";
+        var stopp = 0;
 
         function setup(){
         if(cpf)
@@ -97,6 +98,8 @@
         function loop(){
 
             if(cpf){
+
+                if(stopp == 0){
 
                 if(cpf.get("d2") == 1 && coverheadcount == 0) {
                         setbackgcover();
@@ -147,7 +150,7 @@
                             addscore();
                             addcounterexitafrescue();                       
                         }
-                 
+                 }
 
             }
 
@@ -236,11 +239,13 @@
         function addcounterexitafrescue(){
             exitafrescuecount = exitafrescuecount + 1;
             document.getElementById("exitafterrescuecount").innerHTML = exitafrescuecount;
+            stopp = stopp + 1;
         }
 
         function addcounterexitdidnrescue(){
             exitdidnrescuecount = exitdidnrescuecount + 1;
             document.getElementById("exitdidnotrescuecount").innerHTML = exitdidnrescuecount;
+            stopp = stopp + 1;
         }
 
 //BUTTON FUNCTIONS
