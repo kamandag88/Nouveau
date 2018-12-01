@@ -412,7 +412,7 @@ function showquestion4answer(options4){
 function showquestion5(){
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question5div").className = "show";   
-    document.body.style.backgroundImage = "url('img/Question2.jpg')";       
+    document.body.style.backgroundImage = "url('img/Question2.jpg')";     
 }
 
 function showquestion5answer(options5){
