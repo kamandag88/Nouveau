@@ -175,7 +175,7 @@
                     }
 
                     if(exitafrescue < 1000 && exitafrescuecount == 0){
-                        if(exitdidnrescue >= 1000 && exitdidnrescuecount ==0){
+                        if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0){
                             setbackgexitdidnrescue();
                             addscore();
                             addcounterexitdidnrescue();
@@ -183,7 +183,7 @@
                         }
                     }
 
-                    if(exitafrescue >= 1000 && exitdidnrescuecount ==0){
+                    if(exitafrescue >= 1000 && exitdidnrescuecount == 0){
                             setbackgexitafrescue();
                             addscore();
                             addcounterexitafrescue(); 
