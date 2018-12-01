@@ -329,7 +329,7 @@ function showquestion2answer(options2){
     }
     else if(options2 == q2optB || options2 == q2optC || options2 == q2optD){
         console.log("Wrong Answer - Question 2");
-        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+        document.body.style.backgroundImage = "url('img/Question5Wrong.jpg')";
     } 
     setTimeout("resume()", 2000);
 }
@@ -349,7 +349,7 @@ function showquestion3answer(options3){
     }
     else if(options3 == q3optA || options3 == q3optB || options3 == q3optC){
         console.log("Wrong Answer - Question 3");
-        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+        document.body.style.backgroundImage = "url('img/Question4Wrong.jpg')";
     }
     setTimeout("resume()", 2000); 
 }
@@ -369,7 +369,7 @@ function showquestion4answer(options4){
     }
     else if(options4 == q4optA || options4 == q4optB || options4 == q4optD){
         console.log("Wrong Answer - Question 4");
-        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+        document.body.style.backgroundImage = "url('img/Question3Wrong.jpg')";
     }
     setTimeout("resume()", 2000); 
 }
@@ -390,7 +390,7 @@ function showquestion5answer(options5){
     }
     else if(options5 == q5optA || options5 == q5optC || options5 == q5optD){
         console.log("Wrong Answer - Question 5");
-        document.body.style.backgroundImage = "url('img/Question1Wrong.jpg')";
+        document.body.style.backgroundImage = "url('img/Question2Wrong.jpg')";
     } 
 }
 
