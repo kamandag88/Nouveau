@@ -138,28 +138,24 @@
                         setbackgcover();
                         addscore();
                         addcountercover();
-                        showquestion1();
                     }
 
                     if(door == 1 && doorcount == 0){
                         setbackgdoor();
                         addscore();
                         addcounterdoor();
-                        showquestion2();
                     }
 
                     if(getfireext == 1 && getfireextcount == 0){
                         setbackggetfire();
                         addscore();
                         addcountergetfire();
-                        showquestion3();
                     }
 
                     if(usefireext == 1 && usefireextcount == 0){
                         setbackgusefire();
                         addscore();
                         addcounterusefire();
-                        showquestion4();
                     }
 
                     if(firstexit == 1 && firstexitcount == 0){
@@ -179,15 +175,13 @@
                             setbackgexitdidnrescue();
                             addscore();
                             addcounterexitdidnrescue();
-                            showquestion5();
                         }
                     }
 
                     if(exitafrescue >= 1000 && exitdidnrescuecount == 0){
                             setbackgexitafrescue();
                             addscore();
-                            addcounterexitafrescue(); 
-                            showquestion5();                           
+                            addcounterexitafrescue();                       
                         }
                  }
 
@@ -196,22 +190,24 @@
                 setTimeout("loop()", 1000); 
         }
 
-        loop();
-
         function setbackgcover(){
             document.body.style.backgroundImage = "url('img/InsertCoverInfo.jpg')";
+            setTimeout("showquestion1()", 2000);
         }
 
         function setbackgdoor(){
             document.body.style.backgroundImage = "url('img/InsertDoorInfo.jpg')";
+            setTimeout("showquestion2()", 2000);
         }
 
         function setbackggetfire(){
             document.body.style.backgroundImage = "url('img/InsertGetFireInfo.jpg')";
+            setTimeout("showquestion3()", 2000);
         }
 
         function setbackgusefire(){
             document.body.style.backgroundImage = "url('img/InsertUseFireInfo.jpg')";
+            setTimeout("showquestion4()", 2000);
         }
 
         function setbackgfirstexit(){
@@ -224,10 +220,12 @@
 
         function setbackgexitafrescue(){
             document.body.style.backgroundImage = "url('img/InsertFinishInfo.jpg')";
+            setTimeout("showquestion5()", 2000);
         }
 
         function setbackgexitdidnrescue(){
             document.body.style.backgroundImage = "url('img/InsertFinishInfo.jpg')";
+            setTimeout("showquestion5()", 2000);
         }
 
         function setbackgback(){
@@ -319,6 +317,7 @@ function showandhide5(){
     alwaysshow = alwaysshow + 1;
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
     startnow();
+    loop();
 }
 
 function resume(){
@@ -327,17 +326,11 @@ function resume(){
     document.getElementById("question3nextdiv").style.visibility = "hidden";
     document.getElementById("question4nextdiv").style.visibility = "hidden";
     document.getElementById("question5nextdiv").style.visibility = "hidden";
-    console.log(document.getElementById("timerdiv").style.visibility);
-    console.log(document.getElementById("infodiv").style.visibility);
-    document.getElementById("timerdiv").style.visibility = "show";
     document.getElementById("infodiv").style.visibility = "show";
-    console.log(document.getElementById("timerdiv").style.visibility);
-    console.log(document.getElementById("infodiv").style.visibility);
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";    
 }
 
 function showquestion1(){
-    document.getElementById("timerdiv").style.visibility = "hidden";
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question1div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question1.jpg')";
@@ -361,7 +354,6 @@ function showquestion1answer(options){
 }
 
 function showquestion2(){
-    document.getElementById("timerdiv").style.visibility = "hidden";
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question2div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question5.jpg')";       
@@ -383,7 +375,6 @@ function showquestion2answer(options2){
 }
 
 function showquestion3(){
-    document.getElementById("timerdiv").style.visibility = "hidden";
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question3div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question4.jpg')";       
@@ -405,7 +396,6 @@ function showquestion3answer(options3){
 }
 
 function showquestion4(){
-    document.getElementById("timerdiv").style.visibility = "hidden";
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question4div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question3.jpg')";       
@@ -427,7 +417,6 @@ function showquestion4answer(options4){
 }
 
 function showquestion5(){
-    document.getElementById("timerdiv").style.visibility = "hidden";
     document.getElementById("infodiv").style.visibility = "hidden";
     document.getElementById("question5div").className = "show";   
     document.body.style.backgroundImage = "url('img/Question2.jpg')";       
