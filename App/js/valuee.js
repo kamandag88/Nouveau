@@ -327,8 +327,12 @@ function resume(){
     document.getElementById("question3nextdiv").style.visibility = "hidden";
     document.getElementById("question4nextdiv").style.visibility = "hidden";
     document.getElementById("question5nextdiv").style.visibility = "hidden";
+    console.log(document.getElementById("timerdiv").className);
+    console.log(document.getElementById("infodiv").className);
     document.getElementById("timerdiv").className = "show";
     document.getElementById("infodiv").className = "show";
+    console.log(document.getElementById("timerdiv").className);
+    console.log(document.getElementById("infodiv").className);
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";    
 }
 
