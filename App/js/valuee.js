@@ -329,8 +329,8 @@ function resume(){
     document.getElementById("question5nextdiv").style.visibility = "hidden";
     console.log(document.getElementById("timerdiv").className);
     console.log(document.getElementById("infodiv").className);
-    document.getElementById("timerdiv").className = "show";
-    document.getElementById("infodiv").className = "show";
+    document.getElementById("timerdiv").style.visibility = "show";
+    document.getElementById("infodiv").style.visibility = "show";
     console.log(document.getElementById("timerdiv").className);
     console.log(document.getElementById("infodiv").className);
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";    
