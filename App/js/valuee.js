@@ -198,40 +198,49 @@
 
         function addscore(){
             score = score + 100;
+            document.getElementById("totalpoint").innerHTML = score;
             console.log(score);
         }
 
         function addcountercover(){
             coverheadcount = coverheadcount + 1;
+            document.getElementById("covercount").innerHTML = coverheadcount;
         }
 
         function addcounterdoor(){
             doorcount = doorcount + 1;
+            document.getElementById("doorcount").innerHTML = doorcount;
         }
 
 
         function addcountergetfire(){
             getfireextcount = getfireextcount + 1;
+            document.getElementById("getfirecount").innerHTML = getfireextcount;
         }
 
         function addcounterusefire(){
             usefireextcount = usefireextcount + 1;
+            document.getElementById("usefirecount").innerHTML = usefireextcount;
         }
 
         function addcounterfirstexit(){
             firstexitcount = firstexitcount + 1;
+            document.getElementById("firstexitcount").innerHTML = firstexitcount;
         }
 
         function addcounterrescueperson(){
             rescuepersoncount = rescuepersoncount + 1;
+            document.getElementById("rescuecount").innerHTML = rescuepersoncount;
         }
 
         function addcounterexitafrescue(){
             exitafrescuecount = exitafrescuecount + 1;
+            document.getElementById("exitafterrescuecount").innerHTML = exitafrescuecount;
         }
 
         function addcounterexitdidnrescue(){
             exitdidnrescuecount = exitdidnrescuecount + 1;
+            document.getElementById("exitdidnotrescuecount").innerHTML = exitdidnrescuecount;
         }
 
 //BUTTON FUNCTIONS
