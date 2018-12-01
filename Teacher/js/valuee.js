@@ -15,12 +15,12 @@
         alert("Tapos2");
         alert(valdwd);
         alert("Tapos3");
-        /*document.getElementById("namemo").innerHTML = valdwd.studentname;
+        document.getElementById("namemo").innerHTML = valdwd.studentname;
         document.getElementById("classnumber").innerHTML = valdwd.classnumber;
         document.getElementById("gamescore").innerHTML = valdwd.gamescore;
         document.getElementById("questscore").innerHTML = valdwd.questscore;
         document.getElementById("statsminutes").innerHTML = valdwd.timeminutes;
         document.getElementById("statsseconds").innerHTML = valdwd.timeseconds;
         document.getElementById("statstens").innerHTML = valdwd.timetens;
-*/
+
         }
