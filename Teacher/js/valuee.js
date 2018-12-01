@@ -9,8 +9,7 @@
         storeId2 = "store" + userInput;
         alert(storeId2);
         dwdstr = aop.getStore(storeId2);
-        alert(dwdstr);
-        document.getElementById("DWDstr").innerHTML = dwdstr;    
+        alert(dwdstr);  
         valdwd = JSON.parse(dwdstr);
         alert(valdwd);
         document.getElementById("namemo").innerHTML = valdwd.nameinput;
