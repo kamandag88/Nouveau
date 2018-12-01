@@ -449,8 +449,8 @@ function uploadfinalscore(){
         stopnow();
         storeId = "store" + gradeandsection;
         console.log(storeId);
-        score = score.stringify();
-        questionscore = questionscore.stringify();
+        score = score.toString();
+        questionscore = questionscore.toString();
         valarray = {"studentname": nameinput, "classnumber": gradeandsection, "gamescore": score, "questscore": questionscore, "timeminutes": appendMinutes.innerHTML, "timeseconds": appendSeconds.innerHTML, "timetens": appendTens.innerHTML};
         console.log(valarray);
         valstring = JSON.stringify(valarray);
