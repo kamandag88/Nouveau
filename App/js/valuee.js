@@ -327,12 +327,12 @@ function resume(){
     document.getElementById("question3nextdiv").style.visibility = "hidden";
     document.getElementById("question4nextdiv").style.visibility = "hidden";
     document.getElementById("question5nextdiv").style.visibility = "hidden";
-    console.log(document.getElementById("timerdiv").className);
-    console.log(document.getElementById("infodiv").className);
+    console.log(document.getElementById("timerdiv").style.visibility);
+    console.log(document.getElementById("infodiv").style.visibility);
     document.getElementById("timerdiv").style.visibility = "show";
     document.getElementById("infodiv").style.visibility = "show";
-    console.log(document.getElementById("timerdiv").className);
-    console.log(document.getElementById("infodiv").className);
+    console.log(document.getElementById("timerdiv").style.visibility);
+    console.log(document.getElementById("infodiv").style.visibility);
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";    
 }
 
