@@ -65,28 +65,28 @@
         var score = 0;
         var stringscore;
 
-        var coverhead;
+        //var coverhead;
         var coverheadcount = 0;
 
-        var door;
+        //var door;
         var doorcount = 0;
 
-        var getfireext;
+        //var getfireext;
         var getfireextcount = 0;
 
-        var usefireext;
+        //var usefireext;
         var usefireextcount = 0;
 
-        var firstexit;
+        //var firstexit;
         var firstexitcount = 0;
 
-        var rescueperson;
+        //var rescueperson;
         var rescuepersoncount = 0;
 
-        var exitafrescue;
+        //var exitafrescue;
         var exitafrescuecount = 0;
 
-        var exitdidnrescue;
+        //var exitdidnrescue;
         var exitdidnrescuecount = 0;
 
         var questionscore = 0;
@@ -95,8 +95,6 @@
         var valarray = [];
         var storeId = "store" + 0;
         var valstring = "";
-
-        var alwaysshow = 0;
 
         function setup(){
         if(cpf)
@@ -109,7 +107,7 @@
 
             if(cpf){
 
-                coverhead = cpf.get("d2");
+                /*coverhead = cpf.get("d2");
                 document.getElementById("cover").innerHTML = coverhead; 
 
                 door = cpf.get("d3");
@@ -131,59 +129,58 @@
                 document.getElementById("exitafterrescue").innerHTML = exitafrescue;
 
                 exitdidnrescue = cpf.get("a3");
-                document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;
+                document.getElementById("exitdidnotrescue").innerHTML = exitdidnrescue;*/
 
-                if(alwaysshow == 1){
-                    if(coverhead == 1 && coverheadcount == 0) {
+                if(cpf.get("d2") == 1 && coverheadcount == 0) {
                         setbackgcover();
                         addscore();
                         addcountercover();
                     }
 
-                    if(door == 1 && doorcount == 0){
+                else if(cpf.get("d3") == 1 && doorcount == 0){
                         setbackgdoor();
                         addscore();
                         addcounterdoor();
                     }
 
-                    if(getfireext == 1 && getfireextcount == 0){
+                else if(cpf.get("d4") == 1 && getfireextcount == 0){
                         setbackggetfire();
                         addscore();
                         addcountergetfire();
                     }
 
-                    if(usefireext == 1 && usefireextcount == 0){
+                else if(cpf.get("d5") == 1 && usefireextcount == 0){
                         setbackgusefire();
                         addscore();
                         addcounterusefire();
                     }
 
-                    if(firstexit == 1 && firstexitcount == 0){
+                else if(cpf.get("d7") == 1 && firstexitcount == 0){
                         setbackgfirstexit();
                         addscore();
                         addcounterfirstexit();
                     }
 
-                    if(rescueperson == 1 && rescuepersoncount == 0){
+                else if(cpf.get("d6") == 1 && rescuepersoncount == 0){
                         setbackgrescueperson();
                         addscore();
                         addcounterrescueperson();
                     }
 
-                    if(exitafrescue < 1000 && exitafrescuecount == 0){
-                        if(exitdidnrescue >= 1000 && exitdidnrescuecount == 0){
+                else if(cpf.get("a2") < 1000 && exitafrescuecount == 0){
+                    if(cpf.get("a3") >= 1000 && exitdidnrescuecount == 0){
                             setbackgexitdidnrescue();
                             addscore();
                             addcounterexitdidnrescue();
                         }
                     }
 
-                    if(exitafrescue >= 1000 && exitdidnrescuecount == 0){
+                    else if(cpf.get("a2") >= 1000 && exitdidnrescuecount == 0){
                             setbackgexitafrescue();
                             addscore();
                             addcounterexitafrescue();                       
                         }
-                 }
+                 
 
             }
 
@@ -314,7 +311,6 @@ function showandhide5(){
     document.getElementById("startdiv").style.visibility = "hidden";
     document.getElementById("timerdiv").className = "show";
     document.getElementById("infodiv").className = "show";
-    alwaysshow = alwaysshow + 1;
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
     startnow();
     loop();
