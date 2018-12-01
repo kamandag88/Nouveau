@@ -21,7 +21,12 @@
         gscore = valdwd.gamescore.toString();
         qscore = valdwd.questscore.toString();
 
-        if(gscore >= 500 &&){
-
+        if(gscore >= 600 && qscore >= 40){
+            document.body.style.backgroundImage = "url('img/TeacherGreat.jpg')";
         }
+        else if(gscore >= 400 && qscore >= 30)
+            document.body.style.backgroundImage = "url('img/TeacherGood.jpg')";
+        }
+        else if(gscore < 400 && qscore < 30){
+            document.body.style.backgroundImage = "url('img/TeacherPoor.jpg')";            
         }
