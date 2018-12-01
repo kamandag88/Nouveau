@@ -137,7 +137,7 @@
                         addcountercover();
                     }
 
-                else if(cpf.get("d3") == 1 && doorcount == 0){
+                /*else if(cpf.get("d3") == 1 && doorcount == 0){
                         setbackgdoor();
                         addscore();
                         addcounterdoor();
@@ -179,7 +179,7 @@
                             setbackgexitafrescue();
                             addscore();
                             addcounterexitafrescue();                       
-                        }
+                        }*/
                  
 
             }
