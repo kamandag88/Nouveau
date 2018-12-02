@@ -19,7 +19,9 @@
         document.getElementById("statstens").innerHTML = valdwd.timetens;
 
         gscore = valdwd.gamescore.toString();
+        console.log(gscore);
         qscore = valdwd.questscore.toString();
+        console.log(qscore);
 
         if(gscore >= 600 && qscore >= 40){
             document.body.style.backgroundImage = "url('img/TeacherGreat.jpg')";
