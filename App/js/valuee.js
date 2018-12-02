@@ -394,6 +394,7 @@ function uploadfinalscore(){
 function showandhide17(){
     document.getElementById("question5nextdiv").style.visibility = "hidden";
     document.getElementById("timerdiv").style.visibility = "hidden";
+    document.getElementById("timerdiv").className = "hidden";
     document.getElementById("statsdiv").className = "show";   
     console.log(document.getElementById("statsdiv").className);
     document.body.style.backgroundImage = "url('img/6thScreen.jpg')";
