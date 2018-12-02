@@ -26,7 +26,9 @@
         }
         else if(gscore >= 400 && qscore >= 30)
             document.body.style.backgroundImage = "url('img/TeacherGood.jpg')";
-        }
+
         else if(gscore < 400 && qscore < 30){
             document.body.style.backgroundImage = "url('img/TeacherPoor.jpg')";            
+        }
+
         }
