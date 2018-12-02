@@ -160,22 +160,22 @@
 
         function setbackgcover(){
             document.body.style.backgroundImage = "url('img/InsertCoverInfo.jpg')";
-            setTimeout("showquestion1()", 2000);
+            setTimeout("showquestion1()", 3000);
         }
 
         function setbackgdoor(){
             document.body.style.backgroundImage = "url('img/InsertDoorInfo.jpg')";
-            setTimeout("showquestion2()", 2000);
+            setTimeout("showquestion2()", 3000);
         }
 
         function setbackggetfire(){
             document.body.style.backgroundImage = "url('img/InsertGetFireInfo.jpg')";
-            setTimeout("showquestion3()", 2000);
+            setTimeout("showquestion3()", 3000);
         }
 
         function setbackgusefire(){
             document.body.style.backgroundImage = "url('img/InsertUseFireInfo.jpg')";
-            setTimeout("showquestion4()", 2000);
+            setTimeout("showquestion4()", 3000);
         }
 
         function setbackgfirstexit(){
@@ -188,12 +188,12 @@
 
         function setbackgexitafrescue(){
             document.body.style.backgroundImage = "url('img/InsertFinishInfo.jpg')";
-            setTimeout("showquestion5()", 2000);
+            setTimeout("showquestion5()", 3000);
         }
 
         function setbackgexitdidnrescue(){
             document.body.style.backgroundImage = "url('img/InsertFinishInfo.jpg')";
-            setTimeout("showquestion5()", 2000);
+            setTimeout("showquestion5()", 3000);
         }
 
         function setbackgback(){
