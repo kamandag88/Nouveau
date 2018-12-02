@@ -137,19 +137,12 @@
                         addcounterrescueperson();
                     }
 
-                else if(cpf.get("a2") < 1000 && exitafrescuecount == 0){
-                    if(cpf.get("a3") >= 1000 && exitdidnrescuecount == 0){
-                            setbackgexitdidnrescue();
-                            addscore();
-                            addcounterexitdidnrescue();
-                        }
-                    }
-
-                    else if(cpf.get("a2") >= 1000 && exitdidnrescuecount == 0){
+                else if(cpf.get("a2") >= 1000 && exitafrescuecount == 0){
                             setbackgexitafrescue();
                             addscore();
-                            addcounterexitafrescue();                       
-                        }
+                            addcounterexitafrescue();    
+                    }
+
                  }
 
             }
@@ -186,11 +179,6 @@
         }
 
         function setbackgexitafrescue(){
-            document.body.style.backgroundImage = "url('img/InsertFinishInfo.jpg')";
-            setTimeout("showquestion5()", 2000);
-        }
-
-        function setbackgexitdidnrescue(){
             document.body.style.backgroundImage = "url('img/InsertFinishInfo.jpg')";
             setTimeout("showquestion5()", 2000);
         }
@@ -242,11 +230,6 @@
             stopp = stopp + 1;
         }
 
-        function addcounterexitdidnrescue(){
-            exitdidnrescuecount = exitdidnrescuecount + 1;
-            document.getElementById("exitdidnotrescuecount").innerHTML = exitdidnrescuecount;
-            stopp = stopp + 1;
-        }
 
 //BUTTON FUNCTIONS
 function showandhide(){
