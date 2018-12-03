@@ -137,7 +137,7 @@
                         addcounterrescueperson();
                     }
 
-                else if(cpf.get("a2") < 930 && exitafrescuecount == 0){
+                else if(cpf.get("a2") < 950 && exitafrescuecount == 0){
                     if(cpf.get("a3") >= 1020 && exitdidnrescuecount == 0){
                             setbackgexitdidnrescue();
                             addscore();
@@ -145,7 +145,7 @@
                         }
                     }
 
-                    else if(cpf.get("a2") >= 895 && exitdidnrescuecount == 0){
+                    else if(cpf.get("a2") >= 950 && exitdidnrescuecount == 0){
                             setbackgexitafrescue();
                             addscore();
                             addcounterexitafrescue();                       
